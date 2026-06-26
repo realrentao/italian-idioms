@@ -940,4 +940,25 @@ IDIOMS = [
         'english_eq': 'To put the cart before the horse',
         'meaning_it_cn': '做事顺序颠倒，在逻辑上本末倒置，还没准备好就急着行动。',
     },
+    {
+        "id": 48,
+        'idiom': 'Essere una mosca bianca',
+        'category': 'Rarità / Unicità',
+        'meaning_cn': '罕见的人或物 / 凤毛麟角 / 稀有之物',
+        'meaning_it': 'Essere una persona o una cosa molto rara, difficile da trovare.',
+        'usage_cn': '形容极其罕见、与众不同的人或事物。就像自然界中白色的苍蝇极其少见一样。用于强调某人/某物的稀缺性和独特性。',
+        'examples': [
+            ('A', 'Marco parla cinque lingue perfettamente. È una mosca bianca!', 'Marco精通五门语言。他简直是凤毛麟角！'),
+            ('B', 'Hai ragione, è davvero raro trovare qualcuno così talentuoso.', '你说得对，找到这么有才华的人确实很少见。'),
+            ('A1', 'In questa azienda, un capo che ascolta i dipendenti è una mosca bianca.', '在这家公司，愿意听取员工意见的老板真是凤毛麟角。'),
+            ('B1', 'Infatti, di solito pensano solo ai profitti.', '没错，他们通常只考虑利润。'),
+        ],
+        'cultural_cn': '「Essere = 是」「una mosca = 一只苍蝇」「bianca = 白色的」。字面意思是「是一只白苍蝇」。在自然界中，普通苍蝇是黑色的，白色苍蝇极为罕见。这个表达借用了自然界的稀有现象来形容人或事物的独特性。中文的「凤毛麟角」、英语的「to be a rare bird」或「to be as rare as hen\'s teeth」表达了类似的意思。',
+        'exercise_q': [
+            {'question': '「Essere una mosca bianca」形容什么样的人？', 'options': ['Una persona molto comune', 'Una persona rara e speciale', 'Una persona che ama gli insetti', 'Una persona che ha paura delle mosche'], 'answer': 'B) Una persona rara e speciale'},
+            {'question': 'Completa: In questo campo, un esperto vero è una ________ ________.', 'fill': ['mosca, bianca']},
+        ],
+        'english_eq': 'To be a rare bird / To be one in a million / To be as rare as hen\'s teeth',
+        'meaning_it_cn': '是非常罕见的人或事物，极难找到。',
+    },
 ]
