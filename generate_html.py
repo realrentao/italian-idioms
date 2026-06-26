@@ -1127,7 +1127,25 @@ CATEGORY_CN = {
     "Emozioni": "情绪",
     "Rabbia": "愤怒",
     "Comunicazione": "沟通",
-    "Sincerità": "坦诚"
+    "Sincerità": "坦诚",
+    # New categories from idioms 39-48
+    "Attenzione": "注意力",
+    "Distrazione": "分心",
+    "Piacere": "享乐",
+    "Vizio": "恶习",
+    "Energia": "精力",
+    "Attività": "活动",
+    "Successo": "成功",
+    "Progresso": "进步",
+    "Risentimento": "隐忍",
+    "Sottomissione": "屈从",
+    "Dolore": "痛苦",
+    "Stanchezza": "疲惫",
+    "Potere": "权力",
+    "Logica": "逻辑",
+    "Ordine": "秩序",
+    "Rarità": "稀有",
+    "Unicità": "独特"
 }
 
 def get_inline_texts(idiom):
