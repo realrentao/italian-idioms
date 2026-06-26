@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>意大利语习语 | 涛子办事处</title>
+<style>
+
+/* === Italian Idioms - Global Styles === */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap');
+
+:root {
+    --ita-green: #009246;
+    --ita-white: #F5F5F0;
+    --ita-red: #CE2B37;
+    --gold: #C4A35A;
+    --gold-light: #F0E6C8;
+    --gold-dark: #A0813A;
+    --cream: #FDF8F0;
+    --warm-bg: #FAF6EE;
+    --card-bg: #FFFFFF;
+    --text-dark: #2C2416;
+    --text-mid: #6B5D4A;
+    --text-light: #9A8B75;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    --shadow-hover: 0 8px 32px rgba(0,0,0,0.12);
+    --radius: 16px;
+    --radius-sm: 8px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--warm-bg);
+    color: var(--text-dark);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* Tricolor Header */
+.tricolor-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--ita-green) 0%, var(--ita-green) 33.33%, var(--ita-white) 33.33%, var(--ita-white) 66.66%, var(--ita-red) 66.66%, var(--ita-red) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.main-header {
+    background: linear-gradient(135deg, #2C2416 0%, #4A3828 100%);
+    padding: 60px 20px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(196,163,90,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(206,43,55,0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.main-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.main-header .subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--gold-light);
+    opacity: 0.8;
+    position: relative;
+}
+
+.main-header .subtitle-cn {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 6px;
+    position: relative;
+}
+
+/* Footer */
+.page-footer {
+    background: linear-gradient(135deg, #2C2416 0%, #4A3828 100%);
+    color: var(--text-light);
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 0.85rem;
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    background: var(--gold-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Inline Play Button */
+.inline-play-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid var(--gold-light);
+    background: white;
+    color: var(--gold-dark);
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 4px;
+    padding: 0;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+/* Translation Toggle Button */
+.trans-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid var(--ita-green);
+    background: white;
+    color: var(--ita-green);
+    font-size: 0.65rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 4px;
+    padding: 0;
+    line-height: 1;
+}
+
+.trans-btn:hover {
+    background: var(--ita-green);
+    color: white;
+}
+
+.trans-btn.active {
+    background: var(--ita-green);
+    color: white;
+}
+
+/* Translation Text (hidden by default) */
+.trans-text {
+    display: none;
+    font-size: 0.85rem;
+    color: var(--ita-green);
+    font-weight: 500;
+    padding: 6px 12px;
+    margin: 6px 0 2px 0;
+    background: rgba(0,146,70,0.05);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--ita-green);
+    line-height: 1.5;
+    width: 100%;
+    font-family: 'Noto Serif SC', serif;
+}
+
+.trans-text.visible {
+    display: block;
+}
+
+.inline-play-btn:hover {
+    background: var(--gold);
+    color: white;
+    border-color: var(--gold);
+    transform: scale(1.1);
+}
+
+.inline-play-btn.playing {
+    background: var(--ita-red);
+    color: white;
+    border-color: var(--ita-red);
+    animation: inlinePulse 0.8s infinite;
+}
+
+@keyframes inlinePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(206,43,55,0.3); }
+    50% { box-shadow: 0 0 0 6px rgba(206,43,55,0); }
+}
+
+/* Speed Labels */
+.speed-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Responsive */
+/* ============ CSS Flags (emoji-free) ============ */
+.flag-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    vertical-align: middle;
+}
+
+.flag-icon svg {
+    width: 22px;
+    height: 16px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.flag-it svg { width: 22px; height: 16px; }
+.flag-cn svg { width: 22px; height: 16px; }
+.flag-en svg { width: 22px; height: 16px; }
+
+.flag-it .label,
+.flag-cn .label,
+.flag-en .label {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .main-header h1 { font-size: 2rem; }
+    .main-header .subtitle { font-size: 1rem; }
+    .main-header { padding: 50px 16px 30px; }
+}
+
+@media (max-width: 480px) {
+    .main-header h1 { font-size: 1.6rem; }
+}
+
+
+/* === Index Page Specific Styles === */
+.search-bar {
+    max-width: 500px;
+    margin: -24px auto 40px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 14px 20px 14px 48px;
+    border: 2px solid var(--gold-light);
+    border-radius: 50px;
+    font-size: 1rem;
+    background: var(--card-bg);
+    color: var(--text-dark);
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.search-bar input:focus {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-hover);
+}
+
+.search-bar .search-icon {
+    position: absolute;
+    left: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.idiom-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.idiom-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+.idiom-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--ita-green), var(--gold), var(--ita-red));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.idiom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--gold-light);
+}
+
+.idiom-card:hover::before {
+    opacity: 1;
+}
+
+.idiom-card .card-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.idiom-card .card-idiom {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.idiom-card .card-category {
+    font-size: 0.75rem;
+    color: var(--ita-red);
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.idiom-card .card-meaning {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.5;
+}
+
+.idiom-card .card-hint {
+    font-size: 0.8rem;
+    color: var(--gold-dark);
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* No results */
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    display: none;
+}
+
+/* Stats bar */
+.stats-bar {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.stats-bar .count {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+}
+
+.stats-bar .count strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.category-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.category-tag {
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: var(--card-bg);
+    border: 1px solid var(--gold-light);
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.category-tag:hover,
+.category-tag.active {
+    background: var(--gold);
+    color: white;
+    border-color: var(--gold);
+}
+
+@media (max-width: 768px) {
+    .idiom-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 14px;
+        padding: 0 14px 40px;
+    }
+    .stats-bar { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+    .idiom-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="tricolor-bar"></div>
+
+<header class="main-header">
+    <h1><span class="flag-icon flag-it"><svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#FFFFFF"/><rect x="2" width="1" height="2" fill="#CE2B37"/></svg></span> 意大利语习语</h1>
+    <div class="subtitle">Proverbi e Modi di Dire Italiani</div>
+    <div class="subtitle-cn">常用意大利语习语，轻松掌握地道表达</div>
+</header>
+
+<div class="search-bar">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="搜索习语 / Cerca un proverbio..." oninput="filterIdioms()">
+</div>
+
+<div class="stats-bar">
+    <div class="count">共 <strong>47</strong> 个习语</div>
+    <div class="category-filters">
+        <span class="category-tag active" data-cat="all" onclick="filterByCategory('all', this)">全部</span>
+        <span class="category-tag" data-cat="affari" onclick="filterByCategory('affari', this)">Affari 事务</span>
+                <span class="category-tag" data-cat="amicizia" onclick="filterByCategory('amicizia', this)">Amicizia 友谊</span>
+                <span class="category-tag" data-cat="apprendimento" onclick="filterByCategory('apprendimento', this)">Apprendimento 学习</span>
+                <span class="category-tag" data-cat="attenzione" onclick="filterByCategory('attenzione', this)">Attenzione</span>
+                <span class="category-tag" data-cat="attività" onclick="filterByCategory('attività', this)">Attività</span>
+                <span class="category-tag" data-cat="auguri" onclick="filterByCategory('auguri', this)">Auguri 祝福</span>
+                <span class="category-tag" data-cat="azione" onclick="filterByCategory('azione', this)">Azione 行动</span>
+                <span class="category-tag" data-cat="collaborazione" onclick="filterByCategory('collaborazione', this)">Collaborazione 协作</span>
+                <span class="category-tag" data-cat="comunicazione" onclick="filterByCategory('comunicazione', this)">Comunicazione 沟通</span>
+                <span class="category-tag" data-cat="comunità" onclick="filterByCategory('comunità', this)">Comunità 社区</span>
+                <span class="category-tag" data-cat="consolazione" onclick="filterByCategory('consolazione', this)">Consolazione 安慰</span>
+                <span class="category-tag" data-cat="critica" onclick="filterByCategory('critica', this)">Critica 批评</span>
+                <span class="category-tag" data-cat="determinazione" onclick="filterByCategory('determinazione', this)">Determinazione 决心</span>
+                <span class="category-tag" data-cat="difetto" onclick="filterByCategory('difetto', this)">Difetto 缺点</span>
+                <span class="category-tag" data-cat="distrazione" onclick="filterByCategory('distrazione', this)">Distrazione</span>
+                <span class="category-tag" data-cat="dolore" onclick="filterByCategory('dolore', this)">Dolore</span>
+                <span class="category-tag" data-cat="economia" onclick="filterByCategory('economia', this)">Economia 理财</span>
+                <span class="category-tag" data-cat="efficienza" onclick="filterByCategory('efficienza', this)">Efficienza 效率</span>
+                <span class="category-tag" data-cat="emozioni" onclick="filterByCategory('emozioni', this)">Emozioni 情绪</span>
+                <span class="category-tag" data-cat="energia" onclick="filterByCategory('energia', this)">Energia</span>
+                <span class="category-tag" data-cat="famiglia" onclick="filterByCategory('famiglia', this)">Famiglia 家庭</span>
+                <span class="category-tag" data-cat="felicità" onclick="filterByCategory('felicità', this)">Felicità 幸福</span>
+                <span class="category-tag" data-cat="giudizio" onclick="filterByCategory('giudizio', this)">Giudizio 判断</span>
+                <span class="category-tag" data-cat="gratitudine" onclick="filterByCategory('gratitudine', this)">Gratitudine 感恩</span>
+                <span class="category-tag" data-cat="gusto-personale" onclick="filterByCategory('gusto-personale', this)">Gusto personale 个人品味</span>
+                <span class="category-tag" data-cat="incoraggiamento" onclick="filterByCategory('incoraggiamento', this)">Incoraggiamento 鼓励</span>
+                <span class="category-tag" data-cat="indipendenza" onclick="filterByCategory('indipendenza', this)">Indipendenza 独立</span>
+                <span class="category-tag" data-cat="influenza" onclick="filterByCategory('influenza', this)">Influenza 影响</span>
+                <span class="category-tag" data-cat="ironia" onclick="filterByCategory('ironia', this)">Ironia 讽刺</span>
+                <span class="category-tag" data-cat="logica" onclick="filterByCategory('logica', this)">Logica</span>
+                <span class="category-tag" data-cat="moderazione" onclick="filterByCategory('moderazione', this)">Moderazione 适度</span>
+                <span class="category-tag" data-cat="opportunità" onclick="filterByCategory('opportunità', this)">Opportunità 机会</span>
+                <span class="category-tag" data-cat="ordine" onclick="filterByCategory('ordine', this)">Ordine</span>
+                <span class="category-tag" data-cat="organizzazione" onclick="filterByCategory('organizzazione', this)">Organizzazione 规划</span>
+                <span class="category-tag" data-cat="ottimismo" onclick="filterByCategory('ottimismo', this)">Ottimismo 乐观</span>
+                <span class="category-tag" data-cat="pazienza" onclick="filterByCategory('pazienza', this)">Pazienza 耐心</span>
+                <span class="category-tag" data-cat="perfezionismo" onclick="filterByCategory('perfezionismo', this)">Perfezionismo 完美主义</span>
+                <span class="category-tag" data-cat="perseveranza" onclick="filterByCategory('perseveranza', this)">Perseveranza 坚毅</span>
+                <span class="category-tag" data-cat="piacere" onclick="filterByCategory('piacere', this)">Piacere</span>
+                <span class="category-tag" data-cat="potere" onclick="filterByCategory('potere', this)">Potere</span>
+                <span class="category-tag" data-cat="progresso" onclick="filterByCategory('progresso', this)">Progresso</span>
+                <span class="category-tag" data-cat="rabbia" onclick="filterByCategory('rabbia', this)">Rabbia 愤怒</span>
+                <span class="category-tag" data-cat="realismo" onclick="filterByCategory('realismo', this)">Realismo 现实</span>
+                <span class="category-tag" data-cat="relazioni" onclick="filterByCategory('relazioni', this)">Relazioni 人际关系</span>
+                <span class="category-tag" data-cat="rimprovero" onclick="filterByCategory('rimprovero', this)">Rimprovero 责备</span>
+                <span class="category-tag" data-cat="risentimento" onclick="filterByCategory('risentimento', this)">Risentimento</span>
+                <span class="category-tag" data-cat="riservatezza" onclick="filterByCategory('riservatezza', this)">Riservatezza 谨慎</span>
+                <span class="category-tag" data-cat="saggezza" onclick="filterByCategory('saggezza', this)">Saggezza 智慧</span>
+                <span class="category-tag" data-cat="segretezza" onclick="filterByCategory('segretezza', this)">Segretezza 保密</span>
+                <span class="category-tag" data-cat="sincerità" onclick="filterByCategory('sincerità', this)">Sincerità 坦诚</span>
+                <span class="category-tag" data-cat="sottomissione" onclick="filterByCategory('sottomissione', this)">Sottomissione</span>
+                <span class="category-tag" data-cat="stanchezza" onclick="filterByCategory('stanchezza', this)">Stanchezza</span>
+                <span class="category-tag" data-cat="strategia" onclick="filterByCategory('strategia', this)">Strategia 策略</span>
+                <span class="category-tag" data-cat="successo" onclick="filterByCategory('successo', this)">Successo</span>
+                <span class="category-tag" data-cat="vizio" onclick="filterByCategory('vizio', this)">Vizio</span>
+                
+    </div>
+</div>
+
+<div class="idiom-grid" id="idiomGrid">
+    
+        <a href="idiom-01.html" class="idiom-card" data-category="auguri incoraggiamento" data-search="in bocca al lupo! 祝你好运！/ 加油！">
+            <div class="card-number">#01</div>
+            <div class="card-idiom">In bocca al lupo!</div>
+            <div class="card-category">Auguri / Incoraggiamento</div>
+            <div class="card-meaning">祝你好运！/ 加油！</div>
+            <div class="card-hint">Break a leg!</div>
+        </a>
+        
+        <a href="idiom-02.html" class="idiom-card" data-category="rimprovero ironia" data-search="da che pulpito! 你也好意思说！/ 你还有脸说！">
+            <div class="card-number">#02</div>
+            <div class="card-idiom">Da che pulpito!</div>
+            <div class="card-category">Rimprovero / Ironia</div>
+            <div class="card-meaning">你也好意思说！/ 你还有脸说！</div>
+            <div class="card-hint">Look who's talking! / You're one to talk!</div>
+        </a>
+        
+        <a href="idiom-03.html" class="idiom-card" data-category="consolazione realismo" data-search="non tutte le ciambelle riescono col buco. 人生不如意事十之八九。/ 事与愿违。">
+            <div class="card-number">#03</div>
+            <div class="card-idiom">Non tutte le ciambelle riescono col buco.</div>
+            <div class="card-category">Consolazione / Realismo</div>
+            <div class="card-meaning">人生不如意事十之八九。/ 事与愿违。</div>
+            <div class="card-hint">You can't always get what you want.</div>
+        </a>
+        
+        <a href="idiom-04.html" class="idiom-card" data-category="difetto economia" data-search="avere le mani bucate 花钱如流水 / 存不住钱">
+            <div class="card-number">#04</div>
+            <div class="card-idiom">Avere le mani bucate</div>
+            <div class="card-category">Difetto / Economia</div>
+            <div class="card-meaning">花钱如流水 / 存不住钱</div>
+            <div class="card-hint">Money burns a hole in one's pocket</div>
+        </a>
+        
+        <a href="idiom-05.html" class="idiom-card" data-category="efficienza strategia" data-search="prendere due piccioni con una fava. 一箭双雕 / 一举两得">
+            <div class="card-number">#05</div>
+            <div class="card-idiom">Prendere due piccioni con una fava.</div>
+            <div class="card-category">Efficienza / Strategia</div>
+            <div class="card-meaning">一箭双雕 / 一举两得</div>
+            <div class="card-hint">Kill two birds with one stone</div>
+        </a>
+        
+        <a href="idiom-06.html" class="idiom-card" data-category="relazioni affari" data-search="patti chiari, amicizia lunga. 亲兄弟明算账。/ 先小人后君子。">
+            <div class="card-number">#06</div>
+            <div class="card-idiom">Patti chiari, amicizia lunga.</div>
+            <div class="card-category">Relazioni / Affari</div>
+            <div class="card-meaning">亲兄弟明算账。/ 先小人后君子。</div>
+            <div class="card-hint">Clear agreements make for lasting friendships</div>
+        </a>
+        
+        <a href="idiom-07.html" class="idiom-card" data-category="saggezza pazienza" data-search="chi va piano, va sano e va lontano. 欲速则不达。/ 稳扎稳打，行稳致远。">
+            <div class="card-number">#07</div>
+            <div class="card-idiom">Chi va piano, va sano e va lontano.</div>
+            <div class="card-category">Saggezza / Pazienza</div>
+            <div class="card-meaning">欲速则不达。/ 稳扎稳打，行稳致远。</div>
+            <div class="card-hint">Slow and steady wins the race</div>
+        </a>
+        
+        <a href="idiom-08.html" class="idiom-card" data-category="saggezza azione" data-search="tra il dire e il fare c'è di mezzo il mare. 说起来容易做起来难。/ 言行之间隔着一片海。">
+            <div class="card-number">#08</div>
+            <div class="card-idiom">Tra il dire e il fare c'è di mezzo il mare.</div>
+            <div class="card-category">Saggezza / Azione</div>
+            <div class="card-meaning">说起来容易做起来难。/ 言行之间隔着一片海。</div>
+            <div class="card-hint">Easier said than done / There's many a slip 'twixt cup and lip</div>
+        </a>
+        
+        <a href="idiom-09.html" class="idiom-card" data-category="incoraggiamento ottimismo" data-search="chi cerca trova. 有志者事竟成。/ 功夫不负有心人。">
+            <div class="card-number">#09</div>
+            <div class="card-idiom">Chi cerca trova.</div>
+            <div class="card-category">Incoraggiamento / Ottimismo</div>
+            <div class="card-meaning">有志者事竟成。/ 功夫不负有心人。</div>
+            <div class="card-hint">Seek and you shall find</div>
+        </a>
+        
+        <a href="idiom-10.html" class="idiom-card" data-category="incoraggiamento apprendimento" data-search="sbagliando s'impara. 失败是成功之母。/ 吃一堑，长一智。">
+            <div class="card-number">#10</div>
+            <div class="card-idiom">Sbagliando s'impara.</div>
+            <div class="card-category">Incoraggiamento / Apprendimento</div>
+            <div class="card-meaning">失败是成功之母。/ 吃一堑，长一智。</div>
+            <div class="card-hint">You learn from your mistakes / Practice makes perfect</div>
+        </a>
+        
+        <a href="idiom-11.html" class="idiom-card" data-category="saggezza organizzazione" data-search="chi ben comincia è a metà dell'opera. 良好的开端是成功的一半。">
+            <div class="card-number">#11</div>
+            <div class="card-idiom">Chi ben comincia è a metà dell'opera.</div>
+            <div class="card-category">Saggezza / Organizzazione</div>
+            <div class="card-meaning">良好的开端是成功的一半。</div>
+            <div class="card-hint">Well begun is half done</div>
+        </a>
+        
+        <a href="idiom-12.html" class="idiom-card" data-category="gratitudine relazioni" data-search="a caval donato non si guarda in bocca. 受赠之物，勿挑剔。/ 别挑别人送的礼。">
+            <div class="card-number">#12</div>
+            <div class="card-idiom">A caval donato non si guarda in bocca.</div>
+            <div class="card-category">Gratitudine / Relazioni</div>
+            <div class="card-meaning">受赠之物，勿挑剔。/ 别挑别人送的礼。</div>
+            <div class="card-hint">Don't look a gift horse in the mouth</div>
+        </a>
+        
+        <a href="idiom-13.html" class="idiom-card" data-category="saggezza moderazione" data-search="il troppo stroppia. 过犹不及。/ 凡事有度。">
+            <div class="card-number">#13</div>
+            <div class="card-idiom">Il troppo stroppia.</div>
+            <div class="card-category">Saggezza / Moderazione</div>
+            <div class="card-meaning">过犹不及。/ 凡事有度。</div>
+            <div class="card-hint">Too much of a good thing / Enough is enough</div>
+        </a>
+        
+        <a href="idiom-14.html" class="idiom-card" data-category="incoraggiamento ottimismo" data-search="meglio tardi che mai. 迟做总比不做好。">
+            <div class="card-number">#14</div>
+            <div class="card-idiom">Meglio tardi che mai.</div>
+            <div class="card-category">Incoraggiamento / Ottimismo</div>
+            <div class="card-meaning">迟做总比不做好。</div>
+            <div class="card-hint">Better late than never</div>
+        </a>
+        
+        <a href="idiom-15.html" class="idiom-card" data-category="incoraggiamento azione" data-search="chi dorme non piglia pesci. 早起的鸟儿有虫吃。/ 坐失良机。">
+            <div class="card-number">#15</div>
+            <div class="card-idiom">Chi dorme non piglia pesci.</div>
+            <div class="card-category">Incoraggiamento / Azione</div>
+            <div class="card-meaning">早起的鸟儿有虫吃。/ 坐失良机。</div>
+            <div class="card-hint">The early bird catches the worm / You snooze, you lose</div>
+        </a>
+        
+        <a href="idiom-16.html" class="idiom-card" data-category="pazienza perseveranza" data-search="roma non fu fatta in un giorno. 罗马不是一天建成的。/ 冰冻三尺非一日之寒。">
+            <div class="card-number">#16</div>
+            <div class="card-idiom">Roma non fu fatta in un giorno.</div>
+            <div class="card-category">Pazienza / Perseveranza</div>
+            <div class="card-meaning">罗马不是一天建成的。/ 冰冻三尺非一日之寒。</div>
+            <div class="card-hint">Rome wasn't built in a day</div>
+        </a>
+        
+        <a href="idiom-17.html" class="idiom-card" data-category="saggezza moderazione" data-search="chi troppo vuole nulla stringe. 贪多嚼不烂。/ 样样通样样松。">
+            <div class="card-number">#17</div>
+            <div class="card-idiom">Chi troppo vuole nulla stringe.</div>
+            <div class="card-category">Saggezza / Moderazione</div>
+            <div class="card-meaning">贪多嚼不烂。/ 样样通样样松。</div>
+            <div class="card-hint">Grasp all, lose all / Don't bite off more than you can chew</div>
+        </a>
+        
+        <a href="idiom-18.html" class="idiom-card" data-category="saggezza strategia" data-search="tutte le strade portano a roma. 条条大路通罗马。/ 殊途同归。">
+            <div class="card-number">#18</div>
+            <div class="card-idiom">Tutte le strade portano a Roma.</div>
+            <div class="card-category">Saggezza / Strategia</div>
+            <div class="card-meaning">条条大路通罗马。/ 殊途同归。</div>
+            <div class="card-hint">All roads lead to Rome</div>
+        </a>
+        
+        <a href="idiom-19.html" class="idiom-card" data-category="saggezza felicità" data-search="chi si contenta gode. 知足常乐。">
+            <div class="card-number">#19</div>
+            <div class="card-idiom">Chi si contenta gode.</div>
+            <div class="card-category">Saggezza / Felicità</div>
+            <div class="card-meaning">知足常乐。</div>
+            <div class="card-hint">A contented mind is a perpetual feast</div>
+        </a>
+        
+        <a href="idiom-20.html" class="idiom-card" data-category="relazioni amicizia" data-search="al bisogno si conosce l'amico. 患难见真情。">
+            <div class="card-number">#20</div>
+            <div class="card-idiom">Al bisogno si conosce l'amico.</div>
+            <div class="card-category">Relazioni / Amicizia</div>
+            <div class="card-meaning">患难见真情。</div>
+            <div class="card-hint">A friend in need is a friend indeed</div>
+        </a>
+        
+        <a href="idiom-21.html" class="idiom-card" data-category="consolazione realismo" data-search="piangere sul latte versato. 覆水难收。/ 为打翻的牛奶哭泣。">
+            <div class="card-number">#21</div>
+            <div class="card-idiom">Piangere sul latte versato.</div>
+            <div class="card-category">Consolazione / Realismo</div>
+            <div class="card-meaning">覆水难收。/ 为打翻的牛奶哭泣。</div>
+            <div class="card-hint">Crying over spilt milk</div>
+        </a>
+        
+        <a href="idiom-22.html" class="idiom-card" data-category="indipendenza azione" data-search="chi fa da sé fa per tre. 自己动手，胜过三人。/ 求人不如求己。">
+            <div class="card-number">#22</div>
+            <div class="card-idiom">Chi fa da sé fa per tre.</div>
+            <div class="card-category">Indipendenza / Azione</div>
+            <div class="card-meaning">自己动手，胜过三人。/ 求人不如求己。</div>
+            <div class="card-hint">If you want something done right, do it yourself</div>
+        </a>
+        
+        <a href="idiom-23.html" class="idiom-card" data-category="famiglia gusto-personale" data-search="ogni scarafone è bello a mamma sua. 孩子都是自己的好。/ 情人眼里出西施。">
+            <div class="card-number">#23</div>
+            <div class="card-idiom">Ogni scarafone è bello a mamma sua.</div>
+            <div class="card-category">Famiglia / Gusto personale</div>
+            <div class="card-meaning">孩子都是自己的好。/ 情人眼里出西施。</div>
+            <div class="card-hint">Beauty is in the eye of the beholder</div>
+        </a>
+        
+        <a href="idiom-24.html" class="idiom-card" data-category="opportunità azione" data-search="battere il ferro finché è caldo. 趁热打铁。">
+            <div class="card-number">#24</div>
+            <div class="card-idiom">Battere il ferro finché è caldo.</div>
+            <div class="card-category">Opportunità / Azione</div>
+            <div class="card-meaning">趁热打铁。</div>
+            <div class="card-hint">Strike while the iron is hot</div>
+        </a>
+        
+        <a href="idiom-25.html" class="idiom-card" data-category="collaborazione comunità" data-search="l'unione fa la forza. 团结就是力量。">
+            <div class="card-number">#25</div>
+            <div class="card-idiom">L'unione fa la forza.</div>
+            <div class="card-category">Collaborazione / Comunità</div>
+            <div class="card-meaning">团结就是力量。</div>
+            <div class="card-hint">Unity is strength</div>
+        </a>
+        
+        <a href="idiom-26.html" class="idiom-card" data-category="ironia realismo" data-search="volere la botte piena e la moglie ubriaca. 既要马儿跑，又要马儿不吃草。/ 鱼和熊掌不可兼得。">
+            <div class="card-number">#26</div>
+            <div class="card-idiom">Volere la botte piena e la moglie ubriaca.</div>
+            <div class="card-category">Ironia / Realismo</div>
+            <div class="card-meaning">既要马儿跑，又要马儿不吃草。/ 鱼和熊掌不可兼得。</div>
+            <div class="card-hint">Have your cake and eat it too</div>
+        </a>
+        
+        <a href="idiom-27.html" class="idiom-card" data-category="realismo saggezza" data-search="stare con i piedi per terra. 脚踏实地 / 实事求是。">
+            <div class="card-number">#27</div>
+            <div class="card-idiom">Stare con i piedi per terra.</div>
+            <div class="card-category">Realismo / Saggezza</div>
+            <div class="card-meaning">脚踏实地 / 实事求是。</div>
+            <div class="card-hint">Keep your feet on the ground / Be down-to-earth</div>
+        </a>
+        
+        <a href="idiom-28.html" class="idiom-card" data-category="perseveranza determinazione" data-search="chi la dura la vince. 坚持就是胜利。">
+            <div class="card-number">#28</div>
+            <div class="card-idiom">Chi la dura la vince.</div>
+            <div class="card-category">Perseveranza / Determinazione</div>
+            <div class="card-meaning">坚持就是胜利。</div>
+            <div class="card-hint">Persistence pays off / He who perseveres wins</div>
+        </a>
+        
+        <a href="idiom-29.html" class="idiom-card" data-category="critica perfezionismo" data-search="cercare il pelo nell'uovo. 鸡蛋里挑骨头。/ 吹毛求疵。">
+            <div class="card-number">#29</div>
+            <div class="card-idiom">Cercare il pelo nell'uovo.</div>
+            <div class="card-category">Critica / Perfezionismo</div>
+            <div class="card-meaning">鸡蛋里挑骨头。/ 吹毛求疵。</div>
+            <div class="card-hint">Split hairs / Nitpick</div>
+        </a>
+        
+        <a href="idiom-30.html" class="idiom-card" data-category="influenza relazioni" data-search="chi va con lo zoppo impara a zoppicare. 近朱者赤，近墨者黑。">
+            <div class="card-number">#30</div>
+            <div class="card-idiom">Chi va con lo zoppo impara a zoppicare.</div>
+            <div class="card-category">Influenza / Relazioni</div>
+            <div class="card-meaning">近朱者赤，近墨者黑。</div>
+            <div class="card-hint">He who walks with the lame learns to limp</div>
+        </a>
+        
+        <a href="idiom-31.html" class="idiom-card" data-category="relazioni giudizio" data-search="dimmi con chi vai e ti dirò chi sei. 观其友，知其人。/ 告诉我你和谁在一起，我就知道你是谁。">
+            <div class="card-number">#31</div>
+            <div class="card-idiom">Dimmi con chi vai e ti dirò chi sei.</div>
+            <div class="card-category">Relazioni / Giudizio</div>
+            <div class="card-meaning">观其友，知其人。/ 告诉我你和谁在一起，我就知道你是谁。</div>
+            <div class="card-hint">Tell me who you walk with and I'll tell you who you are</div>
+        </a>
+        
+        <a href="idiom-32.html" class="idiom-card" data-category="segretezza riservatezza" data-search="acqua in bocca! 守口如瓶！/ 保密！">
+            <div class="card-number">#32</div>
+            <div class="card-idiom">Acqua in bocca!</div>
+            <div class="card-category">Segretezza / Riservatezza</div>
+            <div class="card-meaning">守口如瓶！/ 保密！</div>
+            <div class="card-hint">Mum's the word! / Keep it under wraps!</div>
+        </a>
+        
+        <a href="idiom-33.html" class="idiom-card" data-category="economia difetto" data-search="essere al verde 身无分文 / 一贫如洗">
+            <div class="card-number">#33</div>
+            <div class="card-idiom">Essere al verde</div>
+            <div class="card-category">Economia / Difetto</div>
+            <div class="card-meaning">身无分文 / 一贫如洗</div>
+            <div class="card-hint">To be broke / To be flat broke</div>
+        </a>
+        
+        <a href="idiom-34.html" class="idiom-card" data-category="critica influenza saggezza" data-search="non avere peli sulla lingua 直言不讳 / 心直口快 / 有话直说">
+            <div class="card-number">#34</div>
+            <div class="card-idiom">Non avere peli sulla lingua</div>
+            <div class="card-category">Critica / Influenza / Saggezza</div>
+            <div class="card-meaning">直言不讳 / 心直口快 / 有话直说</div>
+            <div class="card-hint">To not mince words / To speak one's mind</div>
+        </a>
+        
+        <a href="idiom-35.html" class="idiom-card" data-category="critica difetto ironia" data-search="essere come il prezzemolo 无处不在 / 哪里都有他 / 多余碍事">
+            <div class="card-number">#35</div>
+            <div class="card-idiom">Essere come il prezzemolo</div>
+            <div class="card-category">Critica / Difetto / Ironia</div>
+            <div class="card-meaning">无处不在 / 哪里都有他 / 多余碍事</div>
+            <div class="card-hint">To be everywhere / To pop up like a bad penny</div>
+        </a>
+        
+        <a href="idiom-36.html" class="idiom-card" data-category="emozioni rabbia" data-search="avere un diavolo per capello 暴跳如雷 / 火冒三丈 / 非常生气">
+            <div class="card-number">#36</div>
+            <div class="card-idiom">Avere un diavolo per capello</div>
+            <div class="card-category">Emozioni / Rabbia</div>
+            <div class="card-meaning">暴跳如雷 / 火冒三丈 / 非常生气</div>
+            <div class="card-hint">To be hopping mad / To be furious</div>
+        </a>
+        
+        <a href="idiom-37.html" class="idiom-card" data-category="comunicazione sincerità" data-search="sputa il rospo! 有话直说！/ 快说吧！/ 别吞吞吐吐的！">
+            <div class="card-number">#37</div>
+            <div class="card-idiom">Sputa il rospo!</div>
+            <div class="card-category">Comunicazione / Sincerità</div>
+            <div class="card-meaning">有话直说！/ 快说吧！/ 别吞吞吐吐的！</div>
+            <div class="card-hint">Spit it out! / Spill the beans!</div>
+        </a>
+        
+        <a href="idiom-38.html" class="idiom-card" data-category="realismo saggezza" data-search="morto un papa, se ne fa un altro 没有谁是不可替代的 / 地球离了谁都转">
+            <div class="card-number">#38</div>
+            <div class="card-idiom">Morto un papa, se ne fa un altro</div>
+            <div class="card-category">Realismo / Saggezza</div>
+            <div class="card-meaning">没有谁是不可替代的 / 地球离了谁都转</div>
+            <div class="card-hint">The king is dead, long live the king! / No one is irreplaceable</div>
+        </a>
+        
+        <a href="idiom-39.html" class="idiom-card" data-category="attenzione distrazione" data-search="avere la testa tra le nuvole 心不在焉 / 走神 / 胡思乱想">
+            <div class="card-number">#39</div>
+            <div class="card-idiom">Avere la testa tra le nuvole</div>
+            <div class="card-category">Attenzione / Distrazione</div>
+            <div class="card-meaning">心不在焉 / 走神 / 胡思乱想</div>
+            <div class="card-hint">To have one's head in the clouds / To be daydreaming</div>
+        </a>
+        
+        <a href="idiom-40.html" class="idiom-card" data-category="piacere vizio" data-search="alzare il gomito 喝酒（尤其是过量饮酒）/ 酗酒">
+            <div class="card-number">#40</div>
+            <div class="card-idiom">Alzare il gomito</div>
+            <div class="card-category">Piacere / Vizio</div>
+            <div class="card-meaning">喝酒（尤其是过量饮酒）/ 酗酒</div>
+            <div class="card-hint">To hit the bottle / To booze / To bend one's elbow</div>
+        </a>
+        
+        <a href="idiom-41.html" class="idiom-card" data-category="energia attività" data-search="avere l'argento vivo addosso 坐不住 / 好动 / 像身上有跳蚤一样">
+            <div class="card-number">#41</div>
+            <div class="card-idiom">Avere l'argento vivo addosso</div>
+            <div class="card-category">Energia / Attività</div>
+            <div class="card-meaning">坐不住 / 好动 / 像身上有跳蚤一样</div>
+            <div class="card-hint">To have ants in one's pants / To be fidgety</div>
+        </a>
+        
+        <a href="idiom-42.html" class="idiom-card" data-category="successo progresso" data-search="andare a gonfie vele 一帆风顺 / 进展顺利 / 蓬勃发展">
+            <div class="card-number">#42</div>
+            <div class="card-idiom">Andare a gonfie vele</div>
+            <div class="card-category">Successo / Progresso</div>
+            <div class="card-meaning">一帆风顺 / 进展顺利 / 蓬勃发展</div>
+            <div class="card-hint">To be going smoothly / To be on a roll / Full steam ahead</div>
+        </a>
+        
+        <a href="idiom-43.html" class="idiom-card" data-category="risentimento sottomissione" data-search="ingoiare il rospo 忍气吞声 / 敢怒不敢言 / 含怒隐忍">
+            <div class="card-number">#43</div>
+            <div class="card-idiom">Ingoiare il rospo</div>
+            <div class="card-category">Risentimento / Sottomissione</div>
+            <div class="card-meaning">忍气吞声 / 敢怒不敢言 / 含怒隐忍</div>
+            <div class="card-hint">To swallow one's pride / To eat humble pie / To grin and bear it</div>
+        </a>
+        
+        <a href="idiom-44.html" class="idiom-card" data-category="dolore stanchezza" data-search="essere a pezzi 心碎 / 身心俱疲 / 悲痛欲绝">
+            <div class="card-number">#44</div>
+            <div class="card-idiom">Essere a pezzi</div>
+            <div class="card-category">Dolore / Stanchezza</div>
+            <div class="card-meaning">心碎 / 身心俱疲 / 悲痛欲绝</div>
+            <div class="card-hint">To be heartbroken / To be shattered / To be worn out</div>
+        </a>
+        
+        <a href="idiom-45.html" class="idiom-card" data-category="influenza potere" data-search="avere le mani in pasta 参与其中 / 插手某事 / 有关系有门路">
+            <div class="card-number">#45</div>
+            <div class="card-idiom">Avere le mani in pasta</div>
+            <div class="card-category">Influenza / Potere</div>
+            <div class="card-meaning">参与其中 / 插手某事 / 有关系有门路</div>
+            <div class="card-hint">To have a finger in the pie / To have a hand in something / To be in on something</div>
+        </a>
+        
+        <a href="idiom-46.html" class="idiom-card" data-category="strategia azione" data-search="fare il passo più lungo della gamba 做超过能力的事 / 贪多嚼不烂 / 力不从心">
+            <div class="card-number">#46</div>
+            <div class="card-idiom">Fare il passo più lungo della gamba</div>
+            <div class="card-category">Strategia / Azione</div>
+            <div class="card-meaning">做超过能力的事 / 贪多嚼不烂 / 力不从心</div>
+            <div class="card-hint">To bite off more than you can chew / To overreach / To punch above one's weight</div>
+        </a>
+        
+        <a href="idiom-47.html" class="idiom-card" data-category="logica ordine" data-search="mettere il carro davanti ai buoi 本末倒置 / 把马车放在牛前面 / 顺序颠倒">
+            <div class="card-number">#47</div>
+            <div class="card-idiom">Mettere il carro davanti ai buoi</div>
+            <div class="card-category">Logica / Ordine</div>
+            <div class="card-meaning">本末倒置 / 把马车放在牛前面 / 顺序颠倒</div>
+            <div class="card-hint">To put the cart before the horse</div>
+        </a>
+        
+</div>
+
+<div class="no-results" id="noResults">
+    没有找到匹配的习语 😅
+</div>
+
+<footer class="page-footer">
+    <p>涛子办事处 &bull; 意大利语习语学习工具</p>
+</footer>
+
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// Search & Filter
+function filterIdioms() {
+    const q = document.getElementById('searchInput').value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.idiom-card');
+    const activeCat = document.querySelector('.category-tag.active:not([data-cat="all"])');
+    let visible = false;
+    
+    cards.forEach(c => {
+        const searchText = c.dataset.search;
+        const cats = c.dataset.category.split(' ');
+        const matchSearch = !q || searchText.includes(q);
+        const matchCat = !activeCat || cats.includes(activeCat.dataset.cat);
+        
+        if (matchSearch && matchCat) {
+            c.style.display = 'block';
+            visible = true;
+        } else {
+            c.style.display = 'none';
+        }
+    });
+    
+    document.getElementById('noResults').style.display = visible ? 'none' : 'block';
+}
+
+function filterByCategory(cat, el) {
+    document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    filterIdioms();
+}
+
+// Back to top
+window.addEventListener('scroll', function() {
+    document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 300);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+.git/
+__pycache__/
+*.pyc
+push_to_github.py
+gh_files.json
+.workbuddy/
