@@ -1162,8 +1162,8 @@ function checkFill(id) {
     const input = document.getElementById('fill-input-' + id);
     const fb = document.getElementById('fill-feedback-' + id);
     const answer = document.getElementById('fill-answer-' + id);
-    const userAnswer = input.value.trim().toLowerCase();
-    const correct = answer.textContent.replace('💡 ', '').trim().toLowerCase();
+    const userAnswer = input.value.trim();
+    const correct = answer.textContent.replace('💡 ', '').trim();
     
     if (!userAnswer) {
         fb.className = 'fill-feedback hint';
@@ -1171,7 +1171,13 @@ function checkFill(id) {
         return;
     }
     
-    if (userAnswer === correct || correct.includes(userAnswer) || userAnswer.includes(correct) || correct.split(/[;；,，]/).some(p => p.trim() === userAnswer)) {
+    // Compare by words in order, ignoring case, punctuation and spacing
+    const normalizeWords = (s) => s.toLowerCase().replace(/[^\wÀ-ɏ'\-]/g, ' ').trim().split(/\s+/).filter(Boolean);
+    const userWords = normalizeWords(userAnswer);
+    const correctWords = normalizeWords(correct);
+    const wordMatch = userWords.length === correctWords.length && userWords.every((w, i) => w === correctWords[i]);
+
+    if (wordMatch) {
         fb.className = 'fill-feedback correct';
         fb.textContent = '✅ 正确！';
         input.classList.add('correct');
