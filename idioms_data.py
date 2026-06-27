@@ -961,4 +961,25 @@ IDIOMS = [
         'english_eq': 'To be a rare bird / To be one in a million / To be as rare as hen\'s teeth',
         'meaning_it_cn': '是非常罕见的人或事物，极难找到。',
     },
+    {
+        "id": 49,
+        'idiom': 'Costare un occhio della testa',
+        'category': 'Economia / Valore',
+        'meaning_cn': '贵得离谱 / 贵到肉疼 / 花大价钱',
+        'meaning_it': 'Avere un prezzo esageratamente alto, troppo costoso.',
+        'usage_cn': '形容某样东西价格极高，贵到让人心疼。指非常贵的东西。',
+        'examples': [
+            ('A', 'Quanto costa quel telefono nuovo?', '那个新手机多少钱？'),
+            ('B', 'Costa un occhio della testa! 2000 euro!', '贵得离谱！2000欧元！'),
+            ('A1', 'Il vacanza alle Maldive quest\'anno?', '今年去马尔代夫度假怎么样？'),
+            ('B1', 'Costa un occhio della testa, altrimenti non andiamo.', '贵死了，不然我们就不去了。')
+        ],
+        'cultural_cn': '「Costare = 花费」「un occhio = 一只眼睛」「della testa = 脑袋的」。字面意思是「花掉脑袋上的一只眼睛」。这个表达来自意大利传统——眼睛是心灵的窗户，最珍贵的东西。如果有人说为了买某个东西愿意捐一只眼睛，说明这个东西贵得让人肝疼。中文的「倾家荡产」、英语的「to cost an arm and a leg」是类似表达。',
+        'exercise_q': [
+            {'question': '「Costare un occhio della testa」是什么意思？', 'options': [' Gratis', 'Molto costoso', 'A buon mercato', 'Non vale nulla'], 'answer': 'B) Molto costoso'},
+            {'question': 'Completa: Quel telefono ____ un ________ della ________!', 'fill': ['costa', 'occhio', 'testa']},
+        ],
+        'english_eq': 'To cost an arm and a leg / To cost a fortune / To break the bank',
+        'meaning_it_cn': '价格极高，贵得让人心疼。',
+    },
 ]
