@@ -1430,16 +1430,25 @@ def generate_idiom_page(idiom):
             exercises_html += f'<div class="exercise-answer" id="answer-{ei}">✅ {ex["answer"]}</div>'
         
         if "fill" in ex:
-            fill_answer = ex["fill"][0]
+            fill_items = ex["fill"]
+            # Support multiple blanks: generate multiple input fields
+            fill_inputs_html = ""
+            fill_answer_text = []
+            for i, ans in enumerate(fill_items):
+                fill_inputs_html += f'''
+                    <input type="text" class="fill-input" id="fill-input-{ei}-{i}" placeholder="第{i+1}个空" autocomplete="off" onkeydown="if(event.key==='Enter')checkFill({ei})">
+                '''
+                fill_answer_text.append(ans)
+            fill_answer_str = " / ".join(fill_answer_text)
             exercises_html += f'''
             <div class="fill-exercise" id="fill-{ei}">
                 <div class="fill-input-row">
-                    <input type="text" class="fill-input" id="fill-input-{ei}" placeholder="输入你的答案..." autocomplete="off" onkeydown="if(event.key==='Enter')checkFill({ei})">
+                    {fill_inputs_html}
                     <button class="fill-check-btn" onclick="checkFill({ei})">✓ 检查</button>
                     <button class="reveal-btn" onclick="toggleFill({ei})">👁 答案</button>
                 </div>
                 <div class="fill-feedback" id="fill-feedback-{ei}"></div>
-                <div class="fill-answer" id="fill-answer-{ei}" style="display:none">💡 {fill_answer}</div>
+                <div class="fill-answer" id="fill-answer-{ei}" style="display:none">💡 {fill_answer_str}</div>
             </div>
             '''
         
@@ -1770,36 +1779,44 @@ function selectOption(el, letter, correctLetter) {{
     }}
 }}
 
-// Exercise: fill-in with typing input
+// Exercise: fill-in with typing input (supports multiple blanks)
 function checkFill(id) {{
-    const input = document.getElementById('fill-input-' + id);
     const fb = document.getElementById('fill-feedback-' + id);
-    const answer = document.getElementById('fill-answer-' + id);
-    const userAnswer = input.value.trim();
-    const correct = answer.textContent.replace('💡 ', '').trim();
+    const answerDiv = document.getElementById('fill-answer-' + id);
+    const correctAnswers = answerDiv.textContent.replace('💡 ', '').trim().split(' / ');
     
-    if (!userAnswer) {{
+    // Find all inputs that start with fill-input-{id}-
+    let allCorrect = true;
+    let hasInput = false;
+    
+    for (let i = 0; i < correctAnswers.length; i++) {{
+        const input = document.getElementById('fill-input-' + id + '-' + i);
+        if (!input) continue;
+        hasInput = true;
+        const userAnswer = input.value.trim().toLowerCase().replace(/[^\w\u00C0-\u024F'\-]/g, '');
+        const correct = correctAnswers[i].trim().toLowerCase().replace(/[^\w\u00C0-\u024F'\-]/g, '');
+        if (userAnswer === correct) {{
+            input.classList.add('correct');
+            input.classList.remove('wrong');
+        }} else {{
+            input.classList.add('wrong');
+            input.classList.remove('correct');
+            allCorrect = false;
+        }}
+    }}
+    
+    if (!hasInput) {{
         fb.className = 'fill-feedback hint';
         fb.textContent = '✏️ 请先输入你的答案';
         return;
     }}
     
-    // Compare by words in order, ignoring case, punctuation and spacing
-    const normalizeWords = (s) => s.toLowerCase().replace(/[^\w\u00C0-\u024F'\-]/g, ' ').trim().split(/\s+/).filter(Boolean);
-    const userWords = normalizeWords(userAnswer);
-    const correctWords = normalizeWords(correct);
-    const wordMatch = userWords.length === correctWords.length && userWords.every((w, i) => w === correctWords[i]);
-
-    if (wordMatch) {{
+    if (allCorrect) {{
         fb.className = 'fill-feedback correct';
         fb.textContent = '✅ 正确！';
-        input.classList.add('correct');
-        input.classList.remove('wrong');
     }} else {{
         fb.className = 'fill-feedback wrong';
         fb.textContent = '❌ 不对，再想想';
-        input.classList.add('wrong');
-        input.classList.remove('correct');
     }}
 }}
 
@@ -1807,10 +1824,15 @@ function toggleFill(id) {{
     const answerDiv = document.getElementById('fill-answer-' + id);
     if (answerDiv.style.display === 'none' || answerDiv.style.display === '') {{
         answerDiv.style.display = 'block';
-        const input = document.getElementById('fill-input-' + id);
-        input.value = answerDiv.textContent.replace('💡 ', '').trim();
-        input.classList.add('correct');
-        input.classList.remove('wrong');
+        const correctAnswers = answerDiv.textContent.replace('💡 ', '').trim().split(' / ');
+        for (let i = 0; i < correctAnswers.length; i++) {{
+            const input = document.getElementById('fill-input-' + id + '-' + i);
+            if (input) {{
+                input.value = correctAnswers[i].trim();
+                input.classList.add('correct');
+                input.classList.remove('wrong');
+            }}
+        }}
         document.getElementById('fill-feedback-' + id).className = 'fill-feedback correct';
         document.getElementById('fill-feedback-' + id).textContent = '✅ 答案已填入';
     }} else {{

@@ -961,12 +961,18 @@ body {
             <div class="exercise-item"><div class="exercise-q">「Costare un occhio della testa」是什么意思？</div><div class="exercise-options"><div class="exercise-opt" onclick="selectOption(this, 'A', 'B')"> Gratis</div><div class="exercise-opt" onclick="selectOption(this, 'B', 'B')">Molto costoso</div><div class="exercise-opt" onclick="selectOption(this, 'C', 'B')">A buon mercato</div><div class="exercise-opt" onclick="selectOption(this, 'D', 'B')">Non vale nulla</div></div><div class="exercise-answer" id="answer-0">✅ B) Molto costoso</div></div><div class="exercise-item"><div class="exercise-q">Completa: Quel telefono ____ un ________ della ________!</div>
             <div class="fill-exercise" id="fill-1">
                 <div class="fill-input-row">
-                    <input type="text" class="fill-input" id="fill-input-1" placeholder="输入你的答案..." autocomplete="off" onkeydown="if(event.key==='Enter')checkFill(1)">
+                    
+                    <input type="text" class="fill-input" id="fill-input-1-0" placeholder="第1个空" autocomplete="off" onkeydown="if(event.key==='Enter')checkFill(1)">
+                
+                    <input type="text" class="fill-input" id="fill-input-1-1" placeholder="第2个空" autocomplete="off" onkeydown="if(event.key==='Enter')checkFill(1)">
+                
+                    <input type="text" class="fill-input" id="fill-input-1-2" placeholder="第3个空" autocomplete="off" onkeydown="if(event.key==='Enter')checkFill(1)">
+                
                     <button class="fill-check-btn" onclick="checkFill(1)">✓ 检查</button>
                     <button class="reveal-btn" onclick="toggleFill(1)">👁 答案</button>
                 </div>
                 <div class="fill-feedback" id="fill-feedback-1"></div>
-                <div class="fill-answer" id="fill-answer-1" style="display:none">💡 costa</div>
+                <div class="fill-answer" id="fill-answer-1" style="display:none">💡 costa / occhio / testa</div>
             </div>
             </div>
         </div>
@@ -978,11 +984,11 @@ body {
 <div class="nav-idioms">
     <a href="idiom-48.html" class="nav-btn prev">← #48</a>
     <a href="index.html" class="nav-btn nav-home">🏠 导航</a>
-    <span class="nav-btn disabled next">最后一页 →</span>
+    <a href="idiom-50.html" class="nav-btn next">#50 →</a>
 </div>
 
 <footer class="page-footer">
-    <p>涛子办事处 · 意大利语习语学习工具 · #49/49</p>
+    <p>涛子办事处 · 意大利语习语学习工具 · #49/50</p>
 </footer>
 
 <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
@@ -1174,36 +1180,44 @@ function selectOption(el, letter, correctLetter) {
     }
 }
 
-// Exercise: fill-in with typing input
+// Exercise: fill-in with typing input (supports multiple blanks)
 function checkFill(id) {
-    const input = document.getElementById('fill-input-' + id);
     const fb = document.getElementById('fill-feedback-' + id);
-    const answer = document.getElementById('fill-answer-' + id);
-    const userAnswer = input.value.trim();
-    const correct = answer.textContent.replace('💡 ', '').trim();
+    const answerDiv = document.getElementById('fill-answer-' + id);
+    const correctAnswers = answerDiv.textContent.replace('💡 ', '').trim().split(' / ');
     
-    if (!userAnswer) {
+    // Find all inputs that start with fill-input-<built-in function id>-
+    let allCorrect = true;
+    let hasInput = false;
+    
+    for (let i = 0; i < correctAnswers.length; i++) {
+        const input = document.getElementById('fill-input-' + id + '-' + i);
+        if (!input) continue;
+        hasInput = true;
+        const userAnswer = input.value.trim().toLowerCase().replace(/[^\wÀ-ɏ'\-]/g, '');
+        const correct = correctAnswers[i].trim().toLowerCase().replace(/[^\wÀ-ɏ'\-]/g, '');
+        if (userAnswer === correct) {
+            input.classList.add('correct');
+            input.classList.remove('wrong');
+        } else {
+            input.classList.add('wrong');
+            input.classList.remove('correct');
+            allCorrect = false;
+        }
+    }
+    
+    if (!hasInput) {
         fb.className = 'fill-feedback hint';
         fb.textContent = '✏️ 请先输入你的答案';
         return;
     }
     
-    // Compare by words in order, ignoring case, punctuation and spacing
-    const normalizeWords = (s) => s.toLowerCase().replace(/[^\wÀ-ɏ'\-]/g, ' ').trim().split(/\s+/).filter(Boolean);
-    const userWords = normalizeWords(userAnswer);
-    const correctWords = normalizeWords(correct);
-    const wordMatch = userWords.length === correctWords.length && userWords.every((w, i) => w === correctWords[i]);
-
-    if (wordMatch) {
+    if (allCorrect) {
         fb.className = 'fill-feedback correct';
         fb.textContent = '✅ 正确！';
-        input.classList.add('correct');
-        input.classList.remove('wrong');
     } else {
         fb.className = 'fill-feedback wrong';
         fb.textContent = '❌ 不对，再想想';
-        input.classList.add('wrong');
-        input.classList.remove('correct');
     }
 }
 
@@ -1211,10 +1225,15 @@ function toggleFill(id) {
     const answerDiv = document.getElementById('fill-answer-' + id);
     if (answerDiv.style.display === 'none' || answerDiv.style.display === '') {
         answerDiv.style.display = 'block';
-        const input = document.getElementById('fill-input-' + id);
-        input.value = answerDiv.textContent.replace('💡 ', '').trim();
-        input.classList.add('correct');
-        input.classList.remove('wrong');
+        const correctAnswers = answerDiv.textContent.replace('💡 ', '').trim().split(' / ');
+        for (let i = 0; i < correctAnswers.length; i++) {
+            const input = document.getElementById('fill-input-' + id + '-' + i);
+            if (input) {
+                input.value = correctAnswers[i].trim();
+                input.classList.add('correct');
+                input.classList.remove('wrong');
+            }
+        }
         document.getElementById('fill-feedback-' + id).className = 'fill-feedback correct';
         document.getElementById('fill-feedback-' + id).textContent = '✅ 答案已填入';
     } else {
