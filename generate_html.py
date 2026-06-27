@@ -1146,7 +1146,8 @@ CATEGORY_CN = {
     "Ordine": "秩序",
     "Rarità": "稀有",
     "Unicità": "独特",
-    "Valore": "价值"
+    "Valore": "价值",
+    "Chiacchiere": "闲聊"
 }
 
 def get_inline_texts(idiom):

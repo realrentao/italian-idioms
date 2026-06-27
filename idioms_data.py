@@ -982,4 +982,25 @@ IDIOMS = [
         'english_eq': 'To cost an arm and a leg / To cost a fortune / To break the bank',
         'meaning_it_cn': '价格极高，贵得让人心疼。',
     },
+    {
+        "id": 50,
+        'idiom': 'Parlare a vanvera',
+        'category': 'Comunicazione / Chiacchiere',
+        'meaning_cn': '胡说八道 / 信口开河 / 瞎扯淡',
+        'meaning_it': 'Dire cose senza senso, raccontare frottole, parlare senza pensare.',
+        'usage_cn': '形容人说话不经过大脑，胡说八道。也可指吹牛、夸大其词。',
+        'examples': [
+            ('A', 'Hai sentito cosa ha detto Marco?', '你听说Marco说什么了吗？'),
+            ('B', 'Sì, ma parla a vanvera come sempre!', '是啊，但他总是胡说八道！'),
+            ('A1', 'Il nuovo progetto sarà pronto domani!', '新项目明天就能完成！'),
+            ('B1', 'Ma parli a vanvera, non è vero!', '你少瞎吹了，不可能！')
+        ],
+        'cultural_cn': '「Parlare = 说话」「a vanvera = 胡乱地」。vanvera 来自威尼斯方言「vanera」，意思是「假的、空的」。字面意思是「空着说话」——没内容、没根据，就是瞎扯。中文的「胡说八道」、「信口开河」是类似表达。英语的「to talk nonsense」或「to shoot the breeze」。',
+        'exercise_q': [
+            {'question': '「Parlare a vanvera」是什么意思？', 'options': ['Parlare seriamente', 'Dire bugie o assurdità', 'Tacere', 'Parlare piano'], 'answer': 'B) Dire bugie o assurdità'},
+            {'question': 'Completa: Non ascoltarlo, lui ____ a ________.', 'fill': ['parla', 'vanvera']},
+        ],
+        'english_eq': 'To talk nonsense / To shoot the breeze / To blow hot air',
+        'meaning_it_cn': '说些没意义的话，胡说八道、瞎扯淡。',
+    },
 ]
