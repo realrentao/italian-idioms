@@ -998,7 +998,7 @@ IDIOMS = [
         'cultural_cn': '「Parlare = 说话」「a vanvera = 胡乱地」。vanvera 来自威尼斯方言「vanera」，意思是「假的、空的」。字面意思是「空着说话」——没内容、没根据，就是瞎扯。中文的「胡说八道」、「信口开河」是类似表达。英语的「to talk nonsense」或「to shoot the breeze」。',
         'exercise_q': [
             {'question': '「Parlare a vanvera」是什么意思？', 'options': ['Parlare seriamente', 'Dire bugie o assurdità', 'Tacere', 'Parlare piano'], 'answer': 'B) Dire bugie o assurdità'},
-            {'question': 'Completa: Non ascoltarlo, lui ____ a ________.', 'fill': ['parla', 'vanvera']},
+            {'question': 'Completa: Non ascoltarlo, lui ________ a __________.', 'fill': ['parla', 'vanvera']},
         ],
         'english_eq': 'To talk nonsense / To shoot the breeze / To blow hot air',
         'meaning_it_cn': '说些没意义的话，胡说八道、瞎扯淡。',
