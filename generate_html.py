@@ -1052,15 +1052,15 @@ IDIOM_PAGE_CSS = """
 
 def svg_flag_it():
     """Italian flag SVG (green-white-red vertical tricolor)"""
-    return '<svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#FFFFFF"/><rect x="2" width="1" height="2" fill="#CE2B37"/></svg>'
+    return '<svg width="1em" height="1em" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#FFFFFF"/><rect x="2" width="1" height="2" fill="#CE2B37"/></svg>'
 
 def svg_flag_cn():
     """Chinese flag SVG (red with 5 yellow stars)"""
-    return '<svg viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="20" fill="#DE2910"/><polygon points="5.2,2.8 5.8,4.5 7.6,4.5 6.1,5.7 6.7,7.4 5.2,6.2 3.7,7.4 4.3,5.7 2.8,4.5 4.6,4.5" fill="#FFDE00"/><polygon points="12,3.6 12.3,4.5 13.2,4.5 12.5,5.1 12.8,6 12,5.4 11.2,6 11.5,5.1 10.8,4.5 11.7,4.5" fill="#FFDE00"/><polygon points="13.8,7.4 14.3,8.1 15.1,8 14.6,8.6 15,9.4 14.2,9.2 13.6,9.8 13.6,9 12.8,8.7 13.6,8.4" fill="#FFDE00"/><polygon points="12,10.8 12.5,11.5 13.3,11.3 12.8,12 13.2,12.8 12.4,12.5 11.8,13.1 11.8,12.3 11,12.1 11.8,11.8" fill="#FFDE00"/><polygon points="9.2,10.2 9.5,11 10.4,11 9.7,11.5 10,12.4 9.2,11.9 8.4,12.3 8.7,11.4 8,10.9 8.9,10.8" fill="#FFDE00"/></svg>'
+    return '<svg width="1em" height="1em" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="20" fill="#DE2910"/><polygon points="5.2,2.8 5.8,4.5 7.6,4.5 6.1,5.7 6.7,7.4 5.2,6.2 3.7,7.4 4.3,5.7 2.8,4.5 4.6,4.5" fill="#FFDE00"/><polygon points="12,3.6 12.3,4.5 13.2,4.5 12.5,5.1 12.8,6 12,5.4 11.2,6 11.5,5.1 10.8,4.5 11.7,4.5" fill="#FFDE00"/><polygon points="13.8,7.4 14.3,8.1 15.1,8 14.6,8.6 15,9.4 14.2,9.2 13.6,9.8 13.6,9 12.8,8.7 13.6,8.4" fill="#FFDE00"/><polygon points="12,10.8 12.5,11.5 13.3,11.3 12.8,12 13.2,12.8 12.4,12.5 11.8,13.1 11.8,12.3 11,12.1 11.8,11.8" fill="#FFDE00"/><polygon points="9.2,10.2 9.5,11 10.4,11 9.7,11.5 10,12.4 9.2,11.9 8.4,12.3 8.7,11.4 8,10.9 8.9,10.8" fill="#FFDE00"/></svg>'
 
 def svg_flag_en():
     """UK flag SVG (Union Jack simplified)"""
-    return '<svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#FFF" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="2"/><path d="M30,0 v30 M0,15 h60" stroke="#FFF" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="4"/></g></svg>'
+    return '<svg width="1em" height="1em" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#FFF" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="2"/><path d="M30,0 v30 M0,15 h60" stroke="#FFF" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="4"/></g></svg>'
 
 
 # ==================== GENERATOR FUNCTIONS ====================
