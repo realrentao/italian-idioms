@@ -1003,4 +1003,25 @@ IDIOMS = [
         'english_eq': 'To talk nonsense / To shoot the breeze / To blow hot air',
         'meaning_it_cn': '说些没意义的话，胡说八道、瞎扯淡。',
     },
+    {
+        "id": 51,
+        'idiom': 'Chi non fa, non falla',
+        'category': 'Azione / Rischio',
+        'meaning_cn': '不干就不会输 / 只要不干就不会错 / 逃避责任',
+        'meaning_it': 'Se non si prova, non si fallisce. Usato in modo ironico o critico per chi evita di agire per paura di sbagliare.',
+        'usage_cn': '讽刺那些因为害怕失败而不愿意尝试的人。也用于自我解嘲或批评他人逃避行为。带有「不作为就不会出错」的讽刺意味。',
+        'examples': [
+            ('A', 'Perché non ti candidati per quel lavoro?', '你为什么不申请那个工作？'),
+            ('B', 'Chi non fa, non falla!', '不干就不会输！'),
+            ('A1', 'Marco non ha nemmeno provato all\'esame.', 'Marco根本没去考试。'),
+            ('B1', 'Beh, chi non fa, non falla, no?', '嘿，不干就不会失败嘛。')
+        ],
+        'cultural_cn': '「Chi = 谁」「non fa = 不做」「non falla = 不会失败」。字面意思是「谁不做，就不会失败」。这是一个讽刺/批判性表达——表面上像是人生哲理，实际上是在批评那些因为害怕失败而不愿意尝试的人。与其说是安慰，不如说是嘲讽。中文的「躺平」、「摆烂」有类似心态，英语的「Those who don\'t try can\'t fail」是字面翻译。',
+        'exercise_q': [
+            {'question': '这个习语通常用什么语气？', 'options': ['认真建议', '讽刺批评', '热情鼓励', '悲伤感叹'], 'answer': 'B) 讽刺批评'},
+            {'question': 'Completa: ____ non ____, non ____.', 'fill': ['Chi', 'fa', 'falla']},
+        ],
+        'english_eq': 'Those who don\'t try can\'t fail / No pain, no gain (反义)',
+        'meaning_it_cn': '讽刺不作为的人——不尝试就不会失败，但这种「聪明」其实是逃避。',
+    },
 ]
