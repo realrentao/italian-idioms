@@ -267,16 +267,16 @@ body {
 }
 
 .flag-icon svg {
-    width: 22px;
-    height: 16px;
+    width: 1em;
+    height: 1em;
     border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.15);
     flex-shrink: 0;
 }
 
-.flag-it svg { width: 22px; height: 16px; }
-.flag-cn svg { width: 22px; height: 16px; }
-.flag-en svg { width: 22px; height: 16px; }
+.flag-it svg { width: 1em; height: 1em; }
+.flag-cn svg { width: 1em; height: 1em; }
+.flag-en svg { width: 1em; height: 1em; }
 
 .flag-it .label,
 .flag-cn .label,
