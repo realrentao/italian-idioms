@@ -1045,4 +1045,25 @@ IDIOMS = [
         "english_eq": "Once in a blue moon / Once in a lifetime / Rarely / Almost never",
         "meaning_it_cn": "极少发生的事情，几乎从不，百年难遇。",
     },
+    {
+        "id": 53,
+        "idiom": "Conosco i miei polli",
+        "category": "Conoscenza / Intuizione",
+        "meaning_cn": "我心里有数 / 我了解底细 / 我知根知底",
+        "meaning_it": "Conosco bene la situazione, le persone o i fatti di cui si parla. So come stanno veramente le cose.",
+        "usage_cn": "表示自己对情况、人物或内情非常了解，心里有数。通常用于暗示自己知道更多，只是不想明说。也可以用于表达对某人的性格、习惯了如指掌。",
+        "examples": [
+            ("A", "Cosa ne pensi del nuovo collega?", "你觉得新同事怎么样？"),
+            ("B", "Conosco i miei polli, sta' a vedere che combina.", "我心里有数，等着看他搞出什么名堂。"),
+            ("A1", "Perché non ti fidi di Gianni?", "你为什么不信任Gianni？"),
+            ("B1", "Oh, conosco i miei polli ormai da anni.", "哦，我了解他的底细，都好几年了。"),
+        ],
+        "cultural_cn": "「Conosco = 我认识/我知道」「i miei polli = 我的鸡」。字面意思是「我认识我的鸡」。这个表达来自农村生活——养鸡的人当然最了解自己的鸡（哪只下蛋、哪只爱打架、哪只胆小）。引申为「我对情况/人/事了如指掌，心里有数」。这是一种带有自信、甚至有点得意的表达，暗示「你不用教我，我心里清楚着呢」。类似中文的「我心里有数」、「我知根知底」，英语的「I know which way the wind blows」或「I know what's what」。",
+        "exercise_q": [
+            {"question": "「Conosco i miei polli」表达什么心态？", "options": ["一无所知", "我心里有数、了解底细", "害怕担心", "生气愤怒"], "answer": "B) 我心里有数、了解底细"},
+            {"question": "Completa: _____ i _____ ______.", "fill": ["Conosco", "miei", "polli"]},
+        ],
+        "english_eq": "I know what's what / I know which way the wind blows / I know the ropes",
+        "meaning_it_cn": "对情况或人了如指掌，心里有数，不用别人提醒。",
+    },
 ]
