@@ -1040,7 +1040,7 @@ IDIOMS = [
         "cultural_cn": "「Ogni = 每次」「morte di papa = 教皇驾崩」。字面意思是「每次教皇去世的时候」。教皇驾崩是极为罕见的事件（毕竟教皇一般能活很久，而且任期终身），用这个时间节点来表示「几乎不会发生」。这是典型的意大利天主教文化背景——整个社会在教皇去世时都会停下来，正因为如此罕见，才被用来比喻「百年难遇」。与38期的「Morto un papa se ne fa un altro」异曲同工，两者都和教皇有关，但意思完全不同。英语类似表达：「once in a blue moon」。",
         "exercise_q": [
             {"question": "「Ogni morte di papa」用于形容什么？", "options": ["每天发生的事", "经常发生的事", "极少发生的事", "从不发生的事"], "answer": "C) 极少发生的事"},
-            {"question": "Completa: Lo vedo _____ _____ _____ _____ .", "fill": ["ogni, morte, di, papa"]},
+            {"question": "Completa: Lo vedo _____ _____ _____ _____ .", "fill": ["ogni", "morte", "di", "papa"]},
         ],
         "english_eq": "Once in a blue moon / Once in a lifetime / Rarely / Almost never",
         "meaning_it_cn": "极少发生的事情，几乎从不，百年难遇。",
