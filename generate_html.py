@@ -1147,7 +1147,8 @@ CATEGORY_CN = {
     "Rarità": "稀有",
     "Unicità": "独特",
     "Valore": "价值",
-    "Chiacchiere": "闲聊"
+    "Chiacchiere": "闲聊",
+    "Tempo": "时间"
 }
 
 def get_inline_texts(idiom):

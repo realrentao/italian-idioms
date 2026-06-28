@@ -1024,4 +1024,25 @@ IDIOMS = [
         'english_eq': 'Those who don\'t try can\'t fail / No pain, no gain (反义)',
         'meaning_it_cn': '讽刺不作为的人——不尝试就不会失败，但这种「聪明」其实是逃避。',
     },
+    {
+        "id": 52,
+        "idiom": "Ogni morte di papa",
+        "category": "Rarità / Tempo",
+        "meaning_cn": "难得一次 / 百年难遇 / 很少很少发生",
+        "meaning_it": "Qualcosa che accade rarissimamente, quasi mai. Un evento molto raro o infrequente.",
+        "usage_cn": "形容某件事极少发生。带有夸张意味，语气轻松，常用于日常口语。比如某个懒人难得做家务、某人很少来拜访，都能用这个表达。",
+        "examples": [
+            ("A", "Quando vai a trovare i tuoi genitori?", "你多久去看一次父母？"),
+            ("B", "Ogni morte di papa... non ho mai tempo.", "很少很少嘛……我从来没时间。"),
+            ("A1", "Il mio capo mi fa i complimenti ogni morte di papa.", "我老板难得夸我一次。"),
+            ("B1", "Almeno qualche volta ti riconosce il lavoro!", "至少偶尔还是认可你的工作嘛！"),
+        ],
+        "cultural_cn": "「Ogni = 每次」「morte di papa = 教皇驾崩」。字面意思是「每次教皇去世的时候」。教皇驾崩是极为罕见的事件（毕竟教皇一般能活很久，而且任期终身），用这个时间节点来表示「几乎不会发生」。这是典型的意大利天主教文化背景——整个社会在教皇去世时都会停下来，正因为如此罕见，才被用来比喻「百年难遇」。与38期的「Morto un papa se ne fa un altro」异曲同工，两者都和教皇有关，但意思完全不同。英语类似表达：「once in a blue moon」。",
+        "exercise_q": [
+            {"question": "「Ogni morte di papa」用于形容什么？", "options": ["每天发生的事", "经常发生的事", "极少发生的事", "从不发生的事"], "answer": "C) 极少发生的事"},
+            {"question": "Completa: Lo vedo _____ _____ _____ _____ .", "fill": ["ogni, morte, di, papa"]},
+        ],
+        "english_eq": "Once in a blue moon / Once in a lifetime / Rarely / Almost never",
+        "meaning_it_cn": "极少发生的事情，几乎从不，百年难遇。",
+    },
 ]
