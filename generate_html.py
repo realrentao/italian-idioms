@@ -1148,7 +1148,9 @@ CATEGORY_CN = {
     "Unicità": "独特",
     "Valore": "价值",
     "Chiacchiere": "闲聊",
-    "Tempo": "时间"
+    "Tempo": "时间",
+    "Conoscenza": "认知",
+    "Intuizione": "直觉"
 }
 
 def get_inline_texts(idiom):
