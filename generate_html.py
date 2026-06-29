@@ -1150,7 +1150,8 @@ CATEGORY_CN = {
     "Chiacchiere": "闲聊",
     "Tempo": "时间",
     "Conoscenza": "认知",
-    "Intuizione": "直觉"
+    "Intuizione": "直觉",
+    "Limite": "边界"
 }
 
 def get_inline_texts(idiom):
