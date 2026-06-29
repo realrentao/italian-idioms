@@ -1066,4 +1066,25 @@ IDIOMS = [
         "english_eq": "I know what's what / I know which way the wind blows / I know the ropes",
         "meaning_it_cn": "对情况或人了如指掌，心里有数，不用别人提醒。",
     },
+    {
+        "id": 54,
+        "idiom": "La mia pazienza ha un limite!",
+        "category": "Pazienza / Limite",
+        "meaning_cn": "我的耐心是有限度的！/ 别得寸进尺！/ 我忍够了！",
+        "meaning_it": "Espressione di avvertimento che indica che si sta per perdere la pazienza. Si usa quando si è tollerato abbastanza e non si intende sopportare oltre.",
+        "usage_cn": "明确警告对方自己快要失去耐心了，不要再继续某种行为。类似最后通牒的语气——「我已经忍够了，再这样我就不客气了」。常用于家庭、职场、朋友间的冲突前奏。",
+        "examples": [
+            ("A", "Dai, fammi giocare ancora un po'!", "让我再玩一会儿嘛！"),
+            ("B", "Basta! La mia pazienza ha un limite!", "够了！我的耐心是有限度的！"),
+            ("A1", "Perché non mi rispondi subito?", "你为什么不立刻回复我？"),
+            ("B1", "La mia pazienza ha un limite, non fare altre domande.", "我耐心有限，别再问其他问题了。"),
+        ],
+        "cultural_cn": "「La mia pazienza = 我的耐心」「ha un limite = 有一个限度」。字面意思是「我的耐心有一个限度」。这是一句非常直接、有力的意大利语警告，通常用在忍无可忍的时刻。在意大利家庭和职场中，人们通常热情直接，但如果有人一直越界，这句就是最后的信号——「再往前一步我就要爆发了」。语气介于严肃警告和情感宣泄之间。类似中文的「别得寸进尺」、「我忍够了」，英语的「That's the last straw!」或「I've had it up to here!」。",
+        "exercise_q": [
+            {"question": "「La mia pazienza ha un limite!」什么时候说？", "options": ["开心的时候", "忍无可忍的时候", "刚认识的时候", "说再见的时候"], "answer": "B) 忍无可忍的时候"},
+            {"question": "Completa: La mia ________ ha un _______!", "fill": ["pazienza", "limite"]},
+        ],
+        "english_eq": "That's the last straw! / I've had it up to here! / My patience has run out!",
+        "meaning_it_cn": "忍无可忍的最终警告，表示再也不会容忍了。",
+    },
 ]
