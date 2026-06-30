@@ -209,6 +209,23 @@ body {
     display: block;
 }
 
+/* Align trans-text with the value text (after label), not the label itself */
+.meaning-item .trans-text {
+    margin-left: 78px; /* label min-width(70px) + gap(8px) */
+    width: calc(100% - 78px);
+}
+.meaning-item .trans-text.visible {
+    display: block;
+}
+
+.example-line .trans-text {
+    margin-left: 30px; /* speaker min-width(24px) + gap(6px) */
+    width: calc(100% - 30px);
+}
+.example-line .trans-text.visible {
+    display: block;
+}
+
 .inline-play-btn:hover {
     background: var(--gold);
     color: white;
