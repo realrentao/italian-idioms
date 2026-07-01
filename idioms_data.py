@@ -1109,4 +1109,25 @@ IDIOMS = [
         "english_eq": "To eat one's words / To go back on one's word / To backtrack",
         "meaning_it_cn": "收回先前说过的话，违背承诺，出尔反尔。",
     },
+    {
+        "id": 56,
+        "idiom": "Tutto fa brodo",
+        "category": "Realismo / Praticità",
+        "meaning_cn": "什么都管用 / 积少成多 / 多少都有帮助",
+        "meaning_it": "Qualunque cosa può essere utile in qualche modo, anche la più piccola o insignificante. Niente va sprecato, ogni contributo conta.",
+        "usage_cn": "形容在困难或资源有限的情况下，任何一点点帮助都是有价值的。意大利人用它来鼓励别人不要小看微小的贡献——「再少也好过没有」。类似于中文的「蚊子腿也是肉」「积少成多」。在职场、募捐、合作等场合很常用。",
+        "examples": [
+            ("A", "Ho trovato solo 5 euro per la colletta.", "我只凑到5欧元捐出来。"),
+            ("B", "Va bene, tutto fa brodo!", "没事，多少都是心意！"),
+            ("A", "Mio zio mi ha insegnato due parole di italiano.", "我叔叔教了我两个意大利语单词。"),
+            ("B", "Impara, tutto fa brodo per il tuo viaggio.", "学吧，对你旅行多少有点帮助。"),
+        ],
+        "cultural_cn": "「Brodo」是意大利传统的清汤/肉汤。这句习语的字面意思是「什么都能做汤」——在物资匮乏的年代，任何菜叶子、骨头渣扔进锅里都能煮出味道。这句话体现了意大利人的实用主义精神：不浪费、不挑剔、物尽其用。类似表达还有「Non si butta via niente」（什么都不浪费）。",
+        "exercise_q": [
+            {"question": "「Tutto fa brodo」是什么意思？", "options": ["所有东西都做汤", "积少成多，什么都管用", "汤很好喝", "别挑食"], "answer": "B) 积少成多，什么都管用"},
+            {"question": "Completa: Non preoccuparti, ______ ____ ______.", "fill": ["tutto", "fa", "brodo"]},
+        ],
+        "english_eq": "Every little bit helps / Any port in a storm / Beggars can't be choosers",
+        "meaning_it_cn": "任何东西，即使是最微小的，也总能在某些方面派上用场。什么都不该浪费，每一点贡献都算数。",
+    },
 ]

@@ -1171,7 +1171,8 @@ CATEGORY_CN = {
     "Intuizione": "直觉",
     "Limite": "边界",
     "Promesse": "承诺",
-    "Incoerenza": "不一贯"
+    "Incoerenza": "不一贯",
+    "Praticità": "实用"
 }
 
 def get_inline_texts(idiom):
