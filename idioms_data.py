@@ -1130,4 +1130,25 @@ IDIOMS = [
         "english_eq": "Every little bit helps / Any port in a storm / Beggars can't be choosers",
         "meaning_it_cn": "任何东西，即使是最微小的，也总能在某些方面派上用场。什么都不该浪费，每一点贡献都算数。",
     },
+    {
+        "id": 57,
+        "idiom": "Prendere un granchio",
+        "category": "Errore / Imbarazzo",
+        "meaning_cn": "犯错 / 搞错 / 出糗 / 大错特错",
+        "meaning_it": "Commettere un errore grossolano e imbarazzante, spesso dovuto a un equivoco o a un fraintendimento. Letteralmente significa 'prendere un granchio' — come se invece di pescare un pesce si tirasse su un granchio.",
+        "usage_cn": "形容犯了一个很蠢很尴尬的错误，通常是因为误会或理解错误导致的。字面画面感很强：本来想抓鱼却抓到了一只螃蟹。用在责备或自嘲某人搞错了基本事实。类似于中文的「闹了个大笑话」「搞了个大乌龙」。在职场、考试、日常对话中常用。",
+        "examples": [
+            ("A", "Credevo che Milano fosse la capitale d'Italia!", "我以为米兰是意大利的首都！"),
+            ("B", "Ah, hai preso un granchio bello grosso!", "哈，你这可大错特错了！"),
+            ("A", "Ho detto al capo che era venerdì, ma era giovedì.", "我告诉老板今天是周五，结果其实是周四。"),
+            ("B", "Che granchio! Sei proprio distratto.", "好尴尬啊！你也太粗心了。"),
+        ],
+        "cultural_cn": "「Prendere un granchio」字面意思是「抓住了一只螃蟹」。想象一下：你在钓鱼，感觉鱼竿沉甸甸的，以为钓到了一条大鱼，结果拉上来一看——是一只螃蟹。这种「期待很大、收获很尴尬」的落差感正是这个习语的核心。螃蟹在这里象征着乱七八糟、不值钱、甚至有点可笑的东西。意大利人用这个表达来调侃那些搞错了基本信息的人，语气通常是善意的嘲笑而非严厉的批评。类似表达还有「Prendere un abbaglio」（被强光晃了眼 → 看走眼）。",
+        "exercise_q": [
+            {"question": "「Prendere un granchio」是什么意思？", "options": ["抓到了一只螃蟹", "犯了一个愚蠢的错误", "去海边玩", "吃海鲜"], "answer": "B) 犯了一个愚蠢的错误"},
+            {"question": "Completa: Ho __________ un ________ al lavoro oggi.", "fill": ["preso", "granchio"]},
+        ],
+        "english_eq": "To put one's foot in one's mouth / To make a blunder / To drop a clanger",
+        "meaning_it_cn": "犯了一个很蠢、很尴尬的错误，通常是因为误会或理解错误导致的。",
+    },
 ]
