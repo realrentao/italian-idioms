@@ -1151,4 +1151,25 @@ IDIOMS = [
         "english_eq": "To put one's foot in one's mouth / To make a blunder / To drop a clanger",
         "meaning_it_cn": "犯了一个很蠢、很尴尬的错误，通常是因为误会或理解错误导致的。",
     },
+    {
+        "id": 58,
+        "idiom": "Un gioco da ragazzi",
+        "category": "Facilità / Semplicità",
+        "meaning_cn": "小菜一碟 / 轻而易举 / 太简单了",
+        "meaning_it": "Qualcosa di estremamente facile da fare, che non richiede sforzo o abilità particolari. Letteralmente 'un gioco da ragazzi' — un'attività così semplice che perfino i bambini potrebbero farla.",
+        "usage_cn": "形容某件事极其简单，不需要花什么力气就能完成。意大利人用它来鼓励别人不要紧张——「别担心，这跟小孩玩游戏一样简单」。类似于中文的「小菜一碟」「轻而一举」「跟玩儿似的」。注意语气通常是轻松、自信的，不是傲慢。在考试、工作、运动等场景都很常用。",
+        "examples": [
+            ("A", "Non so se riuscirò a superare l'esame...", "我不知道能不能通过考试……"),
+            ("B", "Ma dai, è un gioco da ragazzi per te!", "别担心，这对你来说就是小菜一碟！"),
+            ("A", "Hai finito il report in un'ora?", "你一小时就写完了报告？"),
+            ("B", "Sì, era un gioco da ragazzi.", "是啊，太简单了。"),
+        ],
+        "cultural_cn": "「Gioco da ragazzi」字面意思是「孩子们的游戏」。在意大利文化中，童年常被视为无忧无虑、轻松愉快的时期——对孩子来说，游戏就是世界上最自然不过的事。所以用「孩子的游戏」来形容一件事的简单程度，传达出的不只是「不难」，还有「不费力」「自然而然」的含义。类似表达还有「È una passeggiata」（散个步而已）、「È un pezzo di pane」（跟一片面包一样简单）。",
+        "exercise_q": [
+            {"question": "「Un gioco da ragazzi」是什么意思？", "options": ["一个儿童游戏", "小菜一碟，很简单", "一群孩子在玩", "玩具"], "answer": "B) 小菜一碟，很简单"},
+            {"question": "Completa: Non preoccuparti, è un _______ ___ ________.", "fill": ["gioco", "da", "ragazzi"]},
+        ],
+        "english_eq": "A piece of cake / Child's play / A walk in the park / Easy as pie",
+        "meaning_it_cn": "一件非常简单、不费吹灰之力就能完成的事。",
+    },
 ]
