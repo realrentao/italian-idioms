@@ -1172,4 +1172,25 @@ IDIOMS = [
         "english_eq": "A piece of cake / Child's play / A walk in the park / Easy as pie",
         "meaning_it_cn": "一件非常简单、不费吹灰之力就能完成的事。",
     },
+    {
+        "id": 59,
+        "idiom": "Fidarsi è bene, non fidarsi è meglio.",
+        "category": "Saggezza / Prudenza",
+        "meaning_cn": "信任是好的，不信任更好 / 防人之心不可无",
+        "meaning_it": "È saggio fidarsi delle persone, ma è ancora più saggio non fidarsi completamente. Meglio essere cauti che rimanere delusi.",
+        "usage_cn": "一句经典的意大利谚语，字面即意思：信任是好事，但不信任更保险。核心思想是保持适度的怀疑和谨慎——不是让你不信任所有人，而是提醒你不要毫无保留地轻信别人。相当于中文的「害人之心不可有，防人之心不可无」。常用于提醒朋友小心上当，或者在涉及金钱、秘密等敏感话题时使用。",
+        "examples": [
+            ("A", "Mi ha promesso che mi restituirà i soldi.", "他答应会还我钱的。"),
+            ("B", "Fidarsi è bene, non fidarsi è meglio...", "信任是好的，但最好别太信……"),
+            ("A", "Secondo te posso fidarmi di questo contratto?", "你觉得我能相信这份合同吗？"),
+            ("B", "Leggilo bene. Fidarsi è bene, non fidarsi è meglio.", "仔细读读。害人之心不可有，防人之心不可无。"),
+        ],
+        "cultural_cn": "这句话是意大利最广为流传的谚语之一，几乎每个意大利人都会说。它反映了意大利人骨子里的现实主义和谨慎态度——不是悲观，而是一种务实的生存智慧。在意大利历史上，经历了太多政治动荡、经济危机和人际背叛，这种「适度怀疑」成了一种文化基因。但注意，这句话的语气通常是**善意提醒**而非**冷嘲热讽**。意大利人说完这句话往往会眨眨眼，意思是「你懂的，这世界就这样」。",
+        "exercise_q": [
+            {"question": "「Fidarsi è bene, non fidarsi è meglio」是什么意思？", "options": ["信任所有人", "防人之心不可无", "不要相信任何人", "要互相信任"], "answer": "B) 防人之心不可无"},
+            {"question": "Completa: ________ è bene, non ________ è meglio.", "fill": ["Fidarsi", "fidarsi"]},
+        ],
+        "english_eq": "Trust is good, not trusting is better / Better safe than sorry",
+        "meaning_it_cn": "信任是好的，但保持一定的谨慎和怀疑更为稳妥。",
+    },
 ]
