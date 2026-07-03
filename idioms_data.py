@@ -1193,4 +1193,25 @@ IDIOMS = [
         "english_eq": "Trust is good, not trusting is better / Better safe than sorry",
         "meaning_it_cn": "信任是好的，但保持一定的谨慎和怀疑更为稳妥。",
     },
+    {
+        "id": 60,
+        "idiom": "Sotterrare l'ascia di guerra",
+        "category": "Pace / Riconciliazione",
+        "meaning_cn": "化干戈为玉帛 / 休战 / 重归于好",
+        "meaning_it": "Mettere fine a un conflitto, fare pace, smettere di litigare. Dall'usanza dei nativi americani di sotterrare l'ascia di guerra come segno di pace.",
+        "usage_cn": "形容双方放下分歧，结束争吵或敌对关系。语气正面，暗示双方的冲突正式结束。用于朋友争吵后和好、公司间停止竞争、政治冲突和解等场景。",
+        "examples": [
+            ("A", "Dopo anni di litigi, abbiamo deciso di sotterrare l'ascia di guerra.", "吵了几年之后，我们决定化干戈为玉帛。"),
+            ("B", "Finalmente! Era ora di fare pace.", "终于！早就该和好了。"),
+            ("A1", "Le due aziende hanno sotterrato l'ascia di guerra.", "那两家公司休战了。"),
+            ("B1", "Speriamo che duri questa volta.", "希望这次能持久一点。")
+        ],
+        "cultural_cn": "「Sotterrare = 埋藏」「l'ascia di guerra = 战争之斧」。字面意思是「埋掉战斧」。这个表达来自北美印第安人传统——敌对部落之间若要议和，双方会把战斧埋入地下，象征着冲突结束。这个意象传入意大利后被广泛接受。意大利语中这个表达很正式且正面，通常用于描述从对立到和解的积极转变。中文的「化干戈为玉帛」、英语的「to bury the hatchet」是完全对应的表达。",
+        "exercise_q": [
+            {"question": "「Sotterrare l'ascia di guerra」是什么意思？", "options": ["开始战争", "埋掉斧头（真斧头）", "和解、休战", "藏武器"], "answer": "C) 和解、休战"},
+            {"question": "Completa: Finalmente hanno ___________ l'________ di ________.", "fill": ["sotterrato", "ascia", "guerra"]},
+        ],
+        "english_eq": "To bury the hatchet / To make peace / To call a truce / To end hostilities",
+        "meaning_it_cn": "结束冲突、达成和解、重归于好。",
+    },
 ]

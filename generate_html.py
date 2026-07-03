@@ -1177,7 +1177,9 @@ CATEGORY_CN = {
     "Imbarazzo": "尴尬",
     "Facilità": "轻松",
     "Semplicità": "简单",
-    "Prudenza": "谨慎"
+    "Prudenza": "谨慎",
+    "Pace": "和平",
+    "Riconciliazione": "和解"
 }
 
 def get_inline_texts(idiom):
