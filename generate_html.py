@@ -1180,7 +1180,9 @@ CATEGORY_CN = {
     "Prudenza": "谨慎",
     "Autorità": "权威",
     "Pace": "和平",
-    "Riconciliazione": "和解"
+    "Riconciliazione": "和解",
+    "Difficoltà": "困难",
+    "Ricerca": "寻找"
 }
 
 def get_inline_texts(idiom):

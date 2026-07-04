@@ -1235,4 +1235,25 @@ IDIOMS = [
         "english_eq": "To rule the roost / To call the shots / To wear the pants / To lord it over everyone",
         "meaning_it_cn": "一个人决定一切，独断专行，不顾他人意见。",
     },
+    {
+        "id": 62,
+        "idiom": "Cercare un ago in un pagliaio",
+        "category": "Ricerca / Difficoltà",
+        "meaning_cn": "大海捞针 / 极其困难 / 几乎不可能找到",
+        "meaning_it": "Cercare qualcosa di estremamente difficile da trovare, quasi impossibile. Come cercare un piccolo ago in una grande balla di paglia.",
+        "usage_cn": "形容寻找某样东西极其困难，几乎不可能找到。适用于找物品、找人、找信息等一切「难找」的场景。语气通常是无奈、沮丧的。意大利语和中文的表达一模一样——都是「大海捞针」（字面不同但核心比喻相同）。常用于抱怨某样东西太难找，或形容某项任务几乎不可能完成。",
+        "examples": [
+            ("A", "Ho perso l'anello da qualche parte nel parco.", "我把戒指掉在公园某处了。"),
+            ("B", "Cercare un ago in un pagliaio... buona fortuna!", "大海捞针……祝你好运！"),
+            ("A", "Non trovo quel documento tra tutte queste email.", "我在这么多邮件里找不到那份文件。"),
+            ("B", "È come cercare un ago in un pagliaio.", "简直是大海捞针。"),
+        ],
+        "cultural_cn": "「Pagliaio」是干草堆/稻草垛。在农业时代，针掉进干草堆里几乎不可能找到——干草又多又碎，针又小又细。这个画面极具普适性，几乎每种语言都有类似的表达：英语「a needle in a haystack」、法语「une aiguille dans une botte de foin」、西班牙语「una aguja en un pajar」。意大利语的版本和其他语言高度一致，属于跨文化共鸣的表达。语气通常带点夸张的无奈感，不是真的说不可能，而是强调「非常非常难」。",
+        "exercise_q": [
+            {"question": "「Cercare un ago in un pagliaio」是什么意思？", "options": ["找针线", "大海捞针，几乎不可能", "干农活", "打扫卫生"], "answer": "B) 大海捞针，几乎不可能"},
+            {"question": "Completa: È come cercare un ___ in un ________.", "fill": ["ago", "pagliaio"]},
+        ],
+        "english_eq": "A needle in a haystack / Like looking for a needle in a haystack",
+        "meaning_it_cn": "寻找一件几乎不可能找到的东西，形容极其困难。",
+    },
 ]
