@@ -1178,6 +1178,7 @@ CATEGORY_CN = {
     "Facilità": "轻松",
     "Semplicità": "简单",
     "Prudenza": "谨慎",
+    "Autorità": "权威",
     "Pace": "和平",
     "Riconciliazione": "和解"
 }

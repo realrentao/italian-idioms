@@ -1214,4 +1214,25 @@ IDIOMS = [
         "english_eq": "To bury the hatchet / To make peace / To call a truce / To end hostilities",
         "meaning_it_cn": "结束冲突、达成和解、重归于好。",
     },
+    {
+        "id": 61,
+        "idiom": "Fare il bello e il cattivo tempo",
+        "category": "Potere / Autorità",
+        "meaning_cn": "主宰一切 / 独断专行 / 发号施令",
+        "meaning_it": "Decidere tutto da soli, imporre la propria volontà, fare ciò che si vuole senza preoccuparsi degli altri.",
+        "usage_cn": "形容一个人在任何场合都要做主导者，想干什么就干什么，不顾别人的意见。字面意思是「决定好天气和坏天气」——就像掌控天气一样掌控一切。语气带有批评和不满的意味——「就他说了算，别人都得听他的」。用于吐槽上司、父母、或任何喜欢独断专行的人。",
+        "examples": [
+            ("A", "Mio zio vuole decidere anche il menù del matrimonio!", "我叔叔连婚宴菜单都要他来定！"),
+            ("B", "Lui fa il bello e il cattivo tempo in famiglia.", "他在家里就是一手遮天。"),
+            ("A", "Il capo ha cambiato tutto il progetto all'ultimo minuto.", "老板在最后一分钟改了整个方案。"),
+            ("B", "Lui fa il bello e il cattivo tempo qui.", "在这里就是他一个人说了算。"),
+        ],
+        "cultural_cn": "「Il tempo」是天气的意思。在古代，谁能控制天气谁就是神。而这个表达把「决定好天气和坏天气」的能力赋予了某个人——讽刺他把自己当成了神。这个习语在意大利极为常见，属于日常口语高频表达。类似中文的「一手遮天」「独断专行」「说一不二」。注意语气偏向负面——通常是在抱怨或吐槽某人权力过大、行事霸道。",
+        "exercise_q": [
+            {"question": "「Fare il bello e il cattivo tempo」是什么意思？", "options": ["预报天气", "一手遮天、独断专行", "今天天气不错", "做决定"], "answer": "B) 一手遮天、独断专行"},
+            {"question": "Completa: Qui lui fa il _____ e il ______ ______.", "fill": ["bello", "cattivo", "tempo"]},
+        ],
+        "english_eq": "To rule the roost / To call the shots / To wear the pants / To lord it over everyone",
+        "meaning_it_cn": "一个人决定一切，独断专行，不顾他人意见。",
+    },
 ]
