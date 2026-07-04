@@ -1182,7 +1182,11 @@ CATEGORY_CN = {
     "Pace": "和平",
     "Riconciliazione": "和解",
     "Difficoltà": "困难",
-    "Ricerca": "寻找"
+    "Ricerca": "寻找",
+    "Vendetta": "复仇",
+    "Soddisfazione": "满足",
+    "Doppiezza": "两面派",
+    "Maldicenza": "诽谤"
 }
 
 def get_inline_texts(idiom):
