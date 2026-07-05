@@ -1319,4 +1319,25 @@ IDIOMS = [
         "english_eq": "To badmouth someone behind their back / To stab someone in the back / To slander",
         "meaning_it_cn": "在背后说某人坏话、诽谤或陷害。",
     },
+    {
+        "id": 66,
+        "idiom": "Avere il fiuto per gli affari",
+        "category": "Affari / Intuizione",
+        "meaning_cn": "有商业头脑 / 会做生意 / 对商机嗅觉灵敏",
+        "meaning_it": "Avere un'istinto naturale per gli affari, saper riconoscere le buone opportunità commerciali, essere bravo a fare soldi.",
+        "usage_cn": "字面意思是「有做生意的嗅觉」——像动物用嗅觉寻找猎物一样，形容一个人天生就能嗅到赚钱的机会。这个习语是对一个人商业能力的极高评价，不是靠书本学来的理论，而是天生的直觉和实战经验。常用于描述成功的商人、创业者和投资者。注意：fiuto（嗅觉）这个词强调的是一种本能般的判断力，而不是勤奋或知识。",
+        "examples": [
+            ("A", "Ha comprato quelle azioni quando nessuno ci credeva.", "他在没人看好时买了那些股票。"),
+            ("B", "Ha davvero il fiuto per gli affari!", "他真有商业头脑！"),
+            ("A", "Il suo ristorante è sempre pieno anche in crisi.", "他的餐厅即使在危机时也总是客满。"),
+            ("B", "Ce l'ha nel sangue, ha il fiuto per gli affari.", "这在他基因里，他天生就会做生意。"),
+        ],
+        "cultural_cn": "「Fiuto」原本指猎犬的嗅觉——猎犬靠鼻子追踪猎物，是天生本能。把这种能力用在生意场上，形容一个人能像猎犬一样嗅到别人看不见的机会。在意大利商业文化中，这是一个非常高赞誉的表达，暗示对方有天赋而非只是努力。英语中类似的表达「to have a nose for business」「to have a Midas touch」或「business acumen」。注意语气完全正面——是真心佩服对方的商业直觉。",
+        "exercise_q": [
+            {"question": "「Avere il fiuto per gli affari」是什么意思？", "options": ["鼻子大", "有商业头脑/会做生意", "嗅觉灵敏", "喜欢购物"], "answer": "B) 有商业头脑/会做生意"},
+            {"question": "Completa: Marco ha il ______ per gli ______.", "fill": ["fiuto", "affari"]},
+        ],
+        "english_eq": "To have a nose for business / To have a Midas touch / Business acumen",
+        "meaning_it_cn": "天生就能识别和抓住商机，有出色的商业判断力。",
+    },
 ]
