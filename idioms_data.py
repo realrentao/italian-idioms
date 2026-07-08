@@ -1340,4 +1340,25 @@ IDIOMS = [
         "english_eq": "To have a nose for business / To have a Midas touch / Business acumen",
         "meaning_it_cn": "天生就能识别和抓住商机，有出色的商业判断力。",
     },
+    {
+        "id": 67,
+        "idiom": "Tirare l'acqua al proprio mulino",
+        "category": "Interesse / Opportunismo",
+        "meaning_cn": "为自己的利益行事 / 谋私利 / 把事情往对自己有利的方向引",
+        "meaning_it": "Agire per il proprio interesse, sfruttare una situazione a proprio vantaggio, far sembrare le cose favorevoli a sé stessi.",
+        "usage_cn": "字面意思是「把水引到自己磨坊」——磨坊需要水流才能转动磨盘磨面，所以你要让自己的磨坊有水，就得想办法把水引过来。这个习语形容一个人做一件事是为了对自己有利，常常暗指借机谋私、把公共资源或机会导向自己这边。语气带轻微的批评意味——你做的事「表面为公、实际为私」。注意：不是直接的贪污，而是更微妙的「把水引向自己磨坊」式的利己行为。",
+        "examples": [
+            ("A", "Ha votato quella legge solo perché gli conviene.", "他投那项法律只是因为对他有利。"),
+            ("B", "Sta tirando l'acqua al suo mulino, come al solito.", "他又在为自己的利益打算了，老样子。"),
+            ("A", "Ogni volta che parla di quel progetto, ci guadagna lui.", "每次他说起那个项目，都是他得利。"),
+            ("B", "Lo fa per tirare l'acqua al proprio mulino.", "他这么做是为了谋自己的私利。"),
+        ],
+        "cultural_cn": "磨坊（mulino）是传统意大利乡村的核心设施——靠水力磨面。水往哪边流，哪家的磨坊就转得动。所以「把水引到自己磨坊」是一个非常具象的比喻：你表面上在做事，实际上是在把利益的水流导向自己这边。中文有类似说法「肥水不流外人田」，但意大利语这个表达强调的是「主动引水」的动作——更带一点算计和私心的味道。英语中对应「to feather one's own nest」「to serve one's own interests」或「to look out for number one」。",
+        "exercise_q": [
+            {"question": "「Tirare l'acqua al proprio mulino」是什么意思？", "options": ["在磨坊工作", "为自己的利益行事/谋私利", "喜欢喝水", "开磨坊"], "answer": "B) 为自己的利益行事/谋私利"},
+            {"question": "Completa: Sta tirando l'acqua al ______ ______.", "fill": ["proprio", "mulino"]},
+        ],
+        "english_eq": "To feather one's own nest / To serve one's own interests / To look out for number one",
+        "meaning_it_cn": "为自身利益行事，把机会或资源导向自己。",
+    },
 ]

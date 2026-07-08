@@ -1186,7 +1186,9 @@ CATEGORY_CN = {
     "Vendetta": "复仇",
     "Soddisfazione": "满足",
     "Doppiezza": "两面派",
-    "Maldicenza": "诽谤"
+    "Maldicenza": "诽谤",
+    "Interesse": "利益",
+    "Opportunismo": "投机",
 }
 
 def get_inline_texts(idiom):
