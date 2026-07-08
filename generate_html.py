@@ -1189,6 +1189,17 @@ CATEGORY_CN = {
     "Maldicenza": "诽谤",
     "Interesse": "利益",
     "Opportunismo": "投机",
+    "Riserva": "底牌",
+    "Vantaggio": "优势",
+    "Sicurezza": "保障",
+    "Abilità": "手艺",
+    "Talento": "天赋",
+    "Ostacolo": "障碍",
+    "Impedimento": "阻碍",
+    "Trasparenza": "透明",
+    "Libertà": "自由",
+    "Autonomia": "自主",
+    "Partecipazione": "参与",
 }
 
 def get_inline_texts(idiom):
