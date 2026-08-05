@@ -1200,6 +1200,16 @@ CATEGORY_CN = {
     "Libertà": "自由",
     "Autonomia": "自主",
     "Partecipazione": "参与",
+    # New categories from idioms 76-84
+    "Apparenza": "表象",
+    "Cautela": "审慎",
+    "Similarità": "相似",
+    "Affinità": "投缘",
+    "Sorveglianza": "监督",
+    "Gestione": "管理",
+    "Contraddizione": "矛盾",
+    "Ambiguità": "两面性",
+    "Lealtà": "忠诚",
 }
 
 def get_inline_texts(idiom):
