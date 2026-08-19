@@ -1210,6 +1210,8 @@ CATEGORY_CN = {
     "Contraddizione": "矛盾",
     "Ambiguità": "两面性",
     "Lealtà": "忠诚",
+    # New categories from idiom 85
+    "Simulazione": "伪装",
 }
 
 def get_inline_texts(idiom):

@@ -1718,4 +1718,25 @@ IDIOMS = [
         "english_eq": "Bosom friends / Thick as thieves / Friends for life",
         "meaning_it_cn": "可以为对方不惜代价的极深交情。",
     },
+    {
+        "id": 85,
+        "idiom": "Far buon viso a cattivo gioco",
+        "category": "Apparenza / Simulazione",
+        "meaning_cn": "强颜欢笑 / 装没事 / 硬着头皮撑场面",
+        "meaning_it": "Mostrare un atteggiamento sereno e sorridente anche quando la situazione è sfavorevole, nascondendo il proprio disagio o la propria delusione.",
+        "usage_cn": "字面意思是「把好脸色给坏牌局」——viso 是「脸」，cattivo gioco 指「烂牌、劣势的牌局」。打牌手气差，却还要堆着笑、装得没事人一样继续打。这个习语形容人在逆境、坏消息或难堪面前强装镇定、不动声色，把苦水往肚里咽。语气中性偏敬佩，也可带点「硬撑」的无奈。常用于安慰「难为你了」、职场应酬、遇到糟心事还得保持体面的场合。注意：它强调「表面平静 vs 内心苦」，不是真心乐观。",
+        "examples": [
+            ("A", "Mi hanno bocciato il progetto, ma devo sorridere.", "我方案被毙了，可我还得笑。"),
+            ("B", "Fai buon viso a cattivo gioco, almeno qui.", "强颜欢笑吧，至少在这。"),
+            ("A", "Ha perso tutto, ma nessuno se n'è accorto.", "他赔光了，但没人看出来。"),
+            ("B", "Ha fatto buon viso a cattivo gioco.", "他硬撑着装没事。"),
+        ],
+        "cultural_cn": "这句的源头是纸牌游戏——gioco 可指牌局，「cattivo gioco」就是一手烂牌。老派意大利人认为：牌烂没关系，牌品和风度不能丢，于是「把好脸色给烂牌」成了「体面地承受逆境」的代名词。它和 #78「闪光非金」方向相反却精神相通：#78 叫你别被别人的表象骗，这句教你「自己有时也得有表象」。英文对应「to put a brave face on it」「to grin and bear it」「to make the best of a bad job」。中文最贴切「强颜欢笑」「打落牙齿和血吞」「硬着头皮撑场面」。注意：它不带贬义，更多是「无奈中的体面」。",
+        "exercise_q": [
+            {"question": "「Far buon viso a cattivo gioco」是什么意思？", "options": ["打牌赢了", "强颜欢笑/硬撑着装没事", "表情很痛苦", "直接认输"], "answer": "B) 强颜欢笑/硬撑着装没事"},
+            {"question": "Completa: Fa buon ______ a cattivo ______.", "fill": ["viso", "gioco"]},
+        ],
+        "english_eq": "To put a brave face on it / To grin and bear it / To make the best of a bad job",
+        "meaning_it_cn": "在逆境或坏消息面前强装镇定、不动声色地硬撑。",
+    },
 ]
