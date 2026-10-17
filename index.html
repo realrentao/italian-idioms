@@ -446,27 +446,44 @@ body {
 
 .category-filters {
     display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
 }
 
-.category-tag {
-    padding: 4px 14px;
+.cat-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 9px 40px 9px 16px;
     border-radius: 50px;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
+    font-family: inherit;
     font-weight: 500;
-    background: var(--card-bg);
+    background-color: var(--card-bg);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23A0813A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
     border: 1px solid var(--gold-light);
-    color: var(--text-mid);
+    color: var(--text-dark);
     cursor: pointer;
     transition: all 0.2s ease;
+    max-width: 340px;
+    width: auto;
+    min-width: 160px;
+    box-shadow: 0 1px 3px rgba(44,36,22,0.06);
 }
 
-.category-tag:hover,
-.category-tag.active {
-    background: var(--gold);
-    color: white;
+.cat-select:hover,
+.cat-select:focus {
     border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(196,163,90,0.18);
+    outline: none;
+}
+
+.cat-select option {
+    background: var(--card-bg);
+    color: var(--text-dark);
+    padding: 6px;
 }
 
 @media (max-width: 768px) {
@@ -504,250 +521,251 @@ body {
 <div class="stats-bar">
     <div class="count">共 <strong>189</strong> 个习语</div>
     <div class="category-filters">
-        <span class="category-tag active" data-cat="all" onclick="filterByCategory('all', this)">全部</span>
-        <span class="category-tag" data-cat="abbitudine" onclick="filterByCategory('abbitudine', this)">Abbitudine</span>
-                <span class="category-tag" data-cat="abbondanza" onclick="filterByCategory('abbondanza', this)">Abbondanza</span>
-                <span class="category-tag" data-cat="abilità" onclick="filterByCategory('abilità', this)">Abilità 手艺</span>
-                <span class="category-tag" data-cat="addio" onclick="filterByCategory('addio', this)">Addio</span>
-                <span class="category-tag" data-cat="affari" onclick="filterByCategory('affari', this)">Affari 事务</span>
-                <span class="category-tag" data-cat="affetto" onclick="filterByCategory('affetto', this)">Affetto</span>
-                <span class="category-tag" data-cat="affidabilità" onclick="filterByCategory('affidabilità', this)">Affidabilità</span>
-                <span class="category-tag" data-cat="affinità" onclick="filterByCategory('affinità', this)">Affinità 投缘</span>
-                <span class="category-tag" data-cat="agitazione" onclick="filterByCategory('agitazione', this)">Agitazione</span>
-                <span class="category-tag" data-cat="allarme" onclick="filterByCategory('allarme', this)">Allarme</span>
-                <span class="category-tag" data-cat="allegria" onclick="filterByCategory('allegria', this)">Allegria</span>
-                <span class="category-tag" data-cat="ambiguità" onclick="filterByCategory('ambiguità', this)">Ambiguità 两面性</span>
-                <span class="category-tag" data-cat="amicizia" onclick="filterByCategory('amicizia', this)">Amicizia 友谊</span>
-                <span class="category-tag" data-cat="amore" onclick="filterByCategory('amore', this)">Amore</span>
-                <span class="category-tag" data-cat="annullamento" onclick="filterByCategory('annullamento', this)">Annullamento</span>
-                <span class="category-tag" data-cat="apparenza" onclick="filterByCategory('apparenza', this)">Apparenza 表象</span>
-                <span class="category-tag" data-cat="appetito" onclick="filterByCategory('appetito', this)">Appetito</span>
-                <span class="category-tag" data-cat="apprendimento" onclick="filterByCategory('apprendimento', this)">Apprendimento 学习</span>
-                <span class="category-tag" data-cat="arretratezza" onclick="filterByCategory('arretratezza', this)">Arretratezza</span>
-                <span class="category-tag" data-cat="aspettativa" onclick="filterByCategory('aspettativa', this)">Aspettativa 期待</span>
-                <span class="category-tag" data-cat="attenzione" onclick="filterByCategory('attenzione', this)">Attenzione 注意力</span>
-                <span class="category-tag" data-cat="attesa" onclick="filterByCategory('attesa', this)">Attesa</span>
-                <span class="category-tag" data-cat="attività" onclick="filterByCategory('attività', this)">Attività 活动</span>
-                <span class="category-tag" data-cat="attrazione" onclick="filterByCategory('attrazione', this)">Attrazione</span>
-                <span class="category-tag" data-cat="audacia" onclick="filterByCategory('audacia', this)">Audacia</span>
-                <span class="category-tag" data-cat="auguri" onclick="filterByCategory('auguri', this)">Auguri 祝福</span>
-                <span class="category-tag" data-cat="autonomia" onclick="filterByCategory('autonomia', this)">Autonomia 自主</span>
-                <span class="category-tag" data-cat="autorità" onclick="filterByCategory('autorità', this)">Autorità 权威</span>
-                <span class="category-tag" data-cat="azione" onclick="filterByCategory('azione', this)">Azione 行动</span>
-                <span class="category-tag" data-cat="bellezza" onclick="filterByCategory('bellezza', this)">Bellezza</span>
-                <span class="category-tag" data-cat="bontà" onclick="filterByCategory('bontà', this)">Bontà</span>
-                <span class="category-tag" data-cat="calma" onclick="filterByCategory('calma', this)">Calma</span>
-                <span class="category-tag" data-cat="capacità" onclick="filterByCategory('capacità', this)">Capacità</span>
-                <span class="category-tag" data-cat="carattere" onclick="filterByCategory('carattere', this)">Carattere</span>
-                <span class="category-tag" data-cat="casa" onclick="filterByCategory('casa', this)">Casa</span>
-                <span class="category-tag" data-cat="cattivo-umore" onclick="filterByCategory('cattivo-umore', this)">Cattivo umore</span>
-                <span class="category-tag" data-cat="cautela" onclick="filterByCategory('cautela', this)">Cautela 审慎</span>
-                <span class="category-tag" data-cat="chiacchiere" onclick="filterByCategory('chiacchiere', this)">Chiacchiere 闲聊</span>
-                <span class="category-tag" data-cat="chiarezza" onclick="filterByCategory('chiarezza', this)">Chiarezza</span>
-                <span class="category-tag" data-cat="cibo" onclick="filterByCategory('cibo', this)">Cibo</span>
-                <span class="category-tag" data-cat="collaborazione" onclick="filterByCategory('collaborazione', this)">Collaborazione 协作</span>
-                <span class="category-tag" data-cat="colpa" onclick="filterByCategory('colpa', this)">Colpa</span>
-                <span class="category-tag" data-cat="commozione" onclick="filterByCategory('commozione', this)">Commozione</span>
-                <span class="category-tag" data-cat="comodità" onclick="filterByCategory('comodità', this)">Comodità</span>
-                <span class="category-tag" data-cat="competenza" onclick="filterByCategory('competenza', this)">Competenza</span>
-                <span class="category-tag" data-cat="compromesso" onclick="filterByCategory('compromesso', this)">Compromesso</span>
-                <span class="category-tag" data-cat="comunicazione" onclick="filterByCategory('comunicazione', this)">Comunicazione 沟通</span>
-                <span class="category-tag" data-cat="comunità" onclick="filterByCategory('comunità', this)">Comunità 社区</span>
-                <span class="category-tag" data-cat="confusione" onclick="filterByCategory('confusione', this)">Confusione</span>
-                <span class="category-tag" data-cat="conoscenza" onclick="filterByCategory('conoscenza', this)">Conoscenza 认知</span>
-                <span class="category-tag" data-cat="conseguenze" onclick="filterByCategory('conseguenze', this)">Conseguenze</span>
-                <span class="category-tag" data-cat="consolazione" onclick="filterByCategory('consolazione', this)">Consolazione 安慰</span>
-                <span class="category-tag" data-cat="contraddizione" onclick="filterByCategory('contraddizione', this)">Contraddizione 矛盾</span>
-                <span class="category-tag" data-cat="coraggio" onclick="filterByCategory('coraggio', this)">Coraggio</span>
-                <span class="category-tag" data-cat="corteggiamento" onclick="filterByCategory('corteggiamento', this)">Corteggiamento</span>
-                <span class="category-tag" data-cat="crisi" onclick="filterByCategory('crisi', this)">Crisi</span>
-                <span class="category-tag" data-cat="critica" onclick="filterByCategory('critica', this)">Critica 批评</span>
-                <span class="category-tag" data-cat="crudeltà" onclick="filterByCategory('crudeltà', this)">Crudeltà</span>
-                <span class="category-tag" data-cat="cura" onclick="filterByCategory('cura', this)">Cura</span>
-                <span class="category-tag" data-cat="danno" onclick="filterByCategory('danno', this)">Danno</span>
-                <span class="category-tag" data-cat="decisione" onclick="filterByCategory('decisione', this)">Decisione</span>
-                <span class="category-tag" data-cat="delusione" onclick="filterByCategory('delusione', this)">Delusione</span>
-                <span class="category-tag" data-cat="desiderio" onclick="filterByCategory('desiderio', this)">Desiderio</span>
-                <span class="category-tag" data-cat="determinazione" onclick="filterByCategory('determinazione', this)">Determinazione 决心</span>
-                <span class="category-tag" data-cat="difetto" onclick="filterByCategory('difetto', this)">Difetto 缺点</span>
-                <span class="category-tag" data-cat="difficoltà" onclick="filterByCategory('difficoltà', this)">Difficoltà 困难</span>
-                <span class="category-tag" data-cat="dimenticanza" onclick="filterByCategory('dimenticanza', this)">Dimenticanza</span>
-                <span class="category-tag" data-cat="disonestà" onclick="filterByCategory('disonestà', this)">Disonestà</span>
-                <span class="category-tag" data-cat="distacco" onclick="filterByCategory('distacco', this)">Distacco</span>
-                <span class="category-tag" data-cat="distrazione" onclick="filterByCategory('distrazione', this)">Distrazione 分心</span>
-                <span class="category-tag" data-cat="dolore" onclick="filterByCategory('dolore', this)">Dolore 痛苦</span>
-                <span class="category-tag" data-cat="domanda" onclick="filterByCategory('domanda', this)">Domanda</span>
-                <span class="category-tag" data-cat="doppiezza" onclick="filterByCategory('doppiezza', this)">Doppiezza 两面派</span>
-                <span class="category-tag" data-cat="dubbio" onclick="filterByCategory('dubbio', this)">Dubbio 怀疑</span>
-                <span class="category-tag" data-cat="eccitazione" onclick="filterByCategory('eccitazione', this)">Eccitazione</span>
-                <span class="category-tag" data-cat="economia" onclick="filterByCategory('economia', this)">Economia 理财</span>
-                <span class="category-tag" data-cat="efficienza" onclick="filterByCategory('efficienza', this)">Efficienza 效率</span>
-                <span class="category-tag" data-cat="emozione" onclick="filterByCategory('emozione', this)">Emozione</span>
-                <span class="category-tag" data-cat="emozioni" onclick="filterByCategory('emozioni', this)">Emozioni 情绪</span>
-                <span class="category-tag" data-cat="energia" onclick="filterByCategory('energia', this)">Energia 精力</span>
-                <span class="category-tag" data-cat="entusiasmo" onclick="filterByCategory('entusiasmo', this)">Entusiasmo</span>
-                <span class="category-tag" data-cat="errore" onclick="filterByCategory('errore', this)">Errore 错误</span>
-                <span class="category-tag" data-cat="esclusione" onclick="filterByCategory('esclusione', this)">Esclusione</span>
-                <span class="category-tag" data-cat="esperienza" onclick="filterByCategory('esperienza', this)">Esperienza</span>
-                <span class="category-tag" data-cat="facilità" onclick="filterByCategory('facilità', this)">Facilità 轻松</span>
-                <span class="category-tag" data-cat="fallimento" onclick="filterByCategory('fallimento', this)">Fallimento</span>
-                <span class="category-tag" data-cat="famiglia" onclick="filterByCategory('famiglia', this)">Famiglia 家庭</span>
-                <span class="category-tag" data-cat="fastidio" onclick="filterByCategory('fastidio', this)">Fastidio</span>
-                <span class="category-tag" data-cat="fatica" onclick="filterByCategory('fatica', this)">Fatica 辛苦</span>
-                <span class="category-tag" data-cat="felicità" onclick="filterByCategory('felicità', this)">Felicità 幸福</span>
-                <span class="category-tag" data-cat="fine" onclick="filterByCategory('fine', this)">Fine</span>
-                <span class="category-tag" data-cat="finta" onclick="filterByCategory('finta', this)">Finta</span>
-                <span class="category-tag" data-cat="fortuna" onclick="filterByCategory('fortuna', this)">Fortuna</span>
-                <span class="category-tag" data-cat="fuga" onclick="filterByCategory('fuga', this)">Fuga</span>
-                <span class="category-tag" data-cat="furto" onclick="filterByCategory('furto', this)">Furto</span>
-                <span class="category-tag" data-cat="futuro" onclick="filterByCategory('futuro', this)">Futuro</span>
-                <span class="category-tag" data-cat="gentilezza" onclick="filterByCategory('gentilezza', this)">Gentilezza</span>
-                <span class="category-tag" data-cat="gestione" onclick="filterByCategory('gestione', this)">Gestione 管理</span>
-                <span class="category-tag" data-cat="giardinaggio" onclick="filterByCategory('giardinaggio', this)">Giardinaggio</span>
-                <span class="category-tag" data-cat="gioia" onclick="filterByCategory('gioia', this)">Gioia</span>
-                <span class="category-tag" data-cat="giudizio" onclick="filterByCategory('giudizio', this)">Giudizio 判断</span>
-                <span class="category-tag" data-cat="gratitudine" onclick="filterByCategory('gratitudine', this)">Gratitudine 感恩</span>
-                <span class="category-tag" data-cat="gusto-personale" onclick="filterByCategory('gusto-personale', this)">Gusto personale 个人品味</span>
-                <span class="category-tag" data-cat="ignoranza" onclick="filterByCategory('ignoranza', this)">Ignoranza</span>
-                <span class="category-tag" data-cat="ignorare" onclick="filterByCategory('ignorare', this)">Ignorare</span>
-                <span class="category-tag" data-cat="illusione" onclick="filterByCategory('illusione', this)">Illusione 幻想</span>
-                <span class="category-tag" data-cat="imbarazzo" onclick="filterByCategory('imbarazzo', this)">Imbarazzo 尴尬</span>
-                <span class="category-tag" data-cat="impedimento" onclick="filterByCategory('impedimento', this)">Impedimento 阻碍</span>
-                <span class="category-tag" data-cat="impegno" onclick="filterByCategory('impegno', this)">Impegno</span>
-                <span class="category-tag" data-cat="impossibilità" onclick="filterByCategory('impossibilità', this)">Impossibilità</span>
-                <span class="category-tag" data-cat="impressione" onclick="filterByCategory('impressione', this)">Impressione</span>
-                <span class="category-tag" data-cat="inadeguatezza" onclick="filterByCategory('inadeguatezza', this)">Inadeguatezza</span>
-                <span class="category-tag" data-cat="inazione" onclick="filterByCategory('inazione', this)">Inazione</span>
-                <span class="category-tag" data-cat="incertezza" onclick="filterByCategory('incertezza', this)">Incertezza</span>
-                <span class="category-tag" data-cat="incoerenza" onclick="filterByCategory('incoerenza', this)">Incoerenza 不一贯</span>
-                <span class="category-tag" data-cat="incomprensione" onclick="filterByCategory('incomprensione', this)">Incomprensione</span>
-                <span class="category-tag" data-cat="incoraggiamento" onclick="filterByCategory('incoraggiamento', this)">Incoraggiamento 鼓励</span>
-                <span class="category-tag" data-cat="indifferenza" onclick="filterByCategory('indifferenza', this)">Indifferenza</span>
-                <span class="category-tag" data-cat="indipendenza" onclick="filterByCategory('indipendenza', this)">Indipendenza 独立</span>
-                <span class="category-tag" data-cat="influenza" onclick="filterByCategory('influenza', this)">Influenza 影响</span>
-                <span class="category-tag" data-cat="ingiustizia" onclick="filterByCategory('ingiustizia', this)">Ingiustizia</span>
-                <span class="category-tag" data-cat="insuccesso" onclick="filterByCategory('insuccesso', this)">Insuccesso</span>
-                <span class="category-tag" data-cat="intelligenza" onclick="filterByCategory('intelligenza', this)">Intelligenza</span>
-                <span class="category-tag" data-cat="interesse" onclick="filterByCategory('interesse', this)">Interesse 利益</span>
-                <span class="category-tag" data-cat="intromissione" onclick="filterByCategory('intromissione', this)">Intromissione</span>
-                <span class="category-tag" data-cat="intuizione" onclick="filterByCategory('intuizione', this)">Intuizione 直觉</span>
-                <span class="category-tag" data-cat="inutilità" onclick="filterByCategory('inutilità', this)">Inutilità</span>
-                <span class="category-tag" data-cat="ironia" onclick="filterByCategory('ironia', this)">Ironia 讽刺</span>
-                <span class="category-tag" data-cat="lavoro" onclick="filterByCategory('lavoro', this)">Lavoro 工作</span>
-                <span class="category-tag" data-cat="lealtà" onclick="filterByCategory('lealtà', this)">Lealtà 忠诚</span>
-                <span class="category-tag" data-cat="legge" onclick="filterByCategory('legge', this)">Legge</span>
-                <span class="category-tag" data-cat="libertà" onclick="filterByCategory('libertà', this)">Libertà 自由</span>
-                <span class="category-tag" data-cat="limitazione" onclick="filterByCategory('limitazione', this)">Limitazione</span>
-                <span class="category-tag" data-cat="limite" onclick="filterByCategory('limite', this)">Limite 边界</span>
-                <span class="category-tag" data-cat="logica" onclick="filterByCategory('logica', this)">Logica 逻辑</span>
-                <span class="category-tag" data-cat="maldicenza" onclick="filterByCategory('maldicenza', this)">Maldicenza 诽谤</span>
-                <span class="category-tag" data-cat="maturità" onclick="filterByCategory('maturità', this)">Maturità</span>
-                <span class="category-tag" data-cat="mediazione" onclick="filterByCategory('mediazione', this)">Mediazione</span>
-                <span class="category-tag" data-cat="memoria" onclick="filterByCategory('memoria', this)">Memoria</span>
-                <span class="category-tag" data-cat="minaccia" onclick="filterByCategory('minaccia', this)">Minaccia</span>
-                <span class="category-tag" data-cat="mistero" onclick="filterByCategory('mistero', this)">Mistero</span>
-                <span class="category-tag" data-cat="moderazione" onclick="filterByCategory('moderazione', this)">Moderazione 适度</span>
-                <span class="category-tag" data-cat="necessità" onclick="filterByCategory('necessità', this)">Necessità</span>
-                <span class="category-tag" data-cat="noia" onclick="filterByCategory('noia', this)">Noia</span>
-                <span class="category-tag" data-cat="normalità" onclick="filterByCategory('normalità', this)">Normalità</span>
-                <span class="category-tag" data-cat="onestà" onclick="filterByCategory('onestà', this)">Onestà</span>
-                <span class="category-tag" data-cat="opportunismo" onclick="filterByCategory('opportunismo', this)">Opportunismo 投机</span>
-                <span class="category-tag" data-cat="opportunità" onclick="filterByCategory('opportunità', this)">Opportunità 机会</span>
-                <span class="category-tag" data-cat="ordine" onclick="filterByCategory('ordine', this)">Ordine 秩序</span>
-                <span class="category-tag" data-cat="organizzazione" onclick="filterByCategory('organizzazione', this)">Organizzazione 规划</span>
-                <span class="category-tag" data-cat="ossessione" onclick="filterByCategory('ossessione', this)">Ossessione</span>
-                <span class="category-tag" data-cat="ostacolo" onclick="filterByCategory('ostacolo', this)">Ostacolo 障碍</span>
-                <span class="category-tag" data-cat="ostilità" onclick="filterByCategory('ostilità', this)">Ostilità</span>
-                <span class="category-tag" data-cat="ottimismo" onclick="filterByCategory('ottimismo', this)">Ottimismo 乐观</span>
-                <span class="category-tag" data-cat="pace" onclick="filterByCategory('pace', this)">Pace 和平</span>
-                <span class="category-tag" data-cat="parole" onclick="filterByCategory('parole', this)">Parole</span>
-                <span class="category-tag" data-cat="partecipazione" onclick="filterByCategory('partecipazione', this)">Partecipazione 参与</span>
-                <span class="category-tag" data-cat="partenza" onclick="filterByCategory('partenza', this)">Partenza</span>
-                <span class="category-tag" data-cat="paura" onclick="filterByCategory('paura', this)">Paura</span>
-                <span class="category-tag" data-cat="pazienza" onclick="filterByCategory('pazienza', this)">Pazienza 耐心</span>
-                <span class="category-tag" data-cat="pensiero" onclick="filterByCategory('pensiero', this)">Pensiero</span>
-                <span class="category-tag" data-cat="perfezionismo" onclick="filterByCategory('perfezionismo', this)">Perfezionismo 完美主义</span>
-                <span class="category-tag" data-cat="perseveranza" onclick="filterByCategory('perseveranza', this)">Perseveranza 坚毅</span>
-                <span class="category-tag" data-cat="piacere" onclick="filterByCategory('piacere', this)">Piacere 享乐</span>
-                <span class="category-tag" data-cat="pigrizia" onclick="filterByCategory('pigrizia', this)">Pigrizia</span>
-                <span class="category-tag" data-cat="potere" onclick="filterByCategory('potere', this)">Potere 权力</span>
-                <span class="category-tag" data-cat="pratica" onclick="filterByCategory('pratica', this)">Pratica</span>
-                <span class="category-tag" data-cat="praticità" onclick="filterByCategory('praticità', this)">Praticità 实用</span>
-                <span class="category-tag" data-cat="precauzione" onclick="filterByCategory('precauzione', this)">Precauzione</span>
-                <span class="category-tag" data-cat="precisione" onclick="filterByCategory('precisione', this)">Precisione</span>
-                <span class="category-tag" data-cat="preferenza" onclick="filterByCategory('preferenza', this)">Preferenza</span>
-                <span class="category-tag" data-cat="preparazione" onclick="filterByCategory('preparazione', this)">Preparazione 准备</span>
-                <span class="category-tag" data-cat="presa-in-giro" onclick="filterByCategory('presa-in-giro', this)">Presa in giro</span>
-                <span class="category-tag" data-cat="pressione" onclick="filterByCategory('pressione', this)">Pressione</span>
-                <span class="category-tag" data-cat="previdenza" onclick="filterByCategory('previdenza', this)">Previdenza</span>
-                <span class="category-tag" data-cat="prigione" onclick="filterByCategory('prigione', this)">Prigione</span>
-                <span class="category-tag" data-cat="progresso" onclick="filterByCategory('progresso', this)">Progresso 进步</span>
-                <span class="category-tag" data-cat="promesse" onclick="filterByCategory('promesse', this)">Promesse 承诺</span>
-                <span class="category-tag" data-cat="prudenza" onclick="filterByCategory('prudenza', this)">Prudenza 谨慎</span>
-                <span class="category-tag" data-cat="rabbia" onclick="filterByCategory('rabbia', this)">Rabbia 愤怒</span>
-                <span class="category-tag" data-cat="raffinamento" onclick="filterByCategory('raffinamento', this)">Raffinamento</span>
-                <span class="category-tag" data-cat="rancore" onclick="filterByCategory('rancore', this)">Rancore</span>
-                <span class="category-tag" data-cat="rarità" onclick="filterByCategory('rarità', this)">Rarità 稀有</span>
-                <span class="category-tag" data-cat="rassegnazione" onclick="filterByCategory('rassegnazione', this)">Rassegnazione</span>
-                <span class="category-tag" data-cat="realismo" onclick="filterByCategory('realismo', this)">Realismo 现实</span>
-                <span class="category-tag" data-cat="relazioni" onclick="filterByCategory('relazioni', this)">Relazioni 人际关系</span>
-                <span class="category-tag" data-cat="ricerca" onclick="filterByCategory('ricerca', this)">Ricerca 寻找</span>
-                <span class="category-tag" data-cat="riconciliazione" onclick="filterByCategory('riconciliazione', this)">Riconciliazione 和解</span>
-                <span class="category-tag" data-cat="rimprovero" onclick="filterByCategory('rimprovero', this)">Rimprovero 责备</span>
-                <span class="category-tag" data-cat="rischio" onclick="filterByCategory('rischio', this)">Rischio</span>
-                <span class="category-tag" data-cat="risentimento" onclick="filterByCategory('risentimento', this)">Risentimento 隐忍</span>
-                <span class="category-tag" data-cat="riserva" onclick="filterByCategory('riserva', this)">Riserva 底牌</span>
-                <span class="category-tag" data-cat="riservatezza" onclick="filterByCategory('riservatezza', this)">Riservatezza 谨慎</span>
-                <span class="category-tag" data-cat="rovina" onclick="filterByCategory('rovina', this)">Rovina</span>
-                <span class="category-tag" data-cat="sa-zietà" onclick="filterByCategory('sa-zietà', this)">Sa zietà</span>
-                <span class="category-tag" data-cat="sacrificio" onclick="filterByCategory('sacrificio', this)">Sacrificio</span>
-                <span class="category-tag" data-cat="saggezza" onclick="filterByCategory('saggezza', this)">Saggezza 智慧</span>
-                <span class="category-tag" data-cat="santità" onclick="filterByCategory('santità', this)">Santità</span>
-                <span class="category-tag" data-cat="sbaglio" onclick="filterByCategory('sbaglio', this)">Sbaglio</span>
-                <span class="category-tag" data-cat="scelta" onclick="filterByCategory('scelta', this)">Scelta</span>
-                <span class="category-tag" data-cat="scherzo" onclick="filterByCategory('scherzo', this)">Scherzo</span>
-                <span class="category-tag" data-cat="sconfitta" onclick="filterByCategory('sconfitta', this)">Sconfitta</span>
-                <span class="category-tag" data-cat="sconforto" onclick="filterByCategory('sconforto', this)">Sconforto</span>
-                <span class="category-tag" data-cat="scoperta" onclick="filterByCategory('scoperta', this)">Scoperta</span>
-                <span class="category-tag" data-cat="segretezza" onclick="filterByCategory('segretezza', this)">Segretezza 保密</span>
-                <span class="category-tag" data-cat="semplicità" onclick="filterByCategory('semplicità', this)">Semplicità 简单</span>
-                <span class="category-tag" data-cat="sfacciataggine" onclick="filterByCategory('sfacciataggine', this)">Sfacciataggine</span>
-                <span class="category-tag" data-cat="sfortuna" onclick="filterByCategory('sfortuna', this)">Sfortuna</span>
-                <span class="category-tag" data-cat="sforzo" onclick="filterByCategory('sforzo', this)">Sforzo</span>
-                <span class="category-tag" data-cat="sicurezza" onclick="filterByCategory('sicurezza', this)">Sicurezza 保障</span>
-                <span class="category-tag" data-cat="similarità" onclick="filterByCategory('similarità', this)">Similarità 相似</span>
-                <span class="category-tag" data-cat="simulazione" onclick="filterByCategory('simulazione', this)">Simulazione 伪装</span>
-                <span class="category-tag" data-cat="sincerità" onclick="filterByCategory('sincerità', this)">Sincerità 坦诚</span>
-                <span class="category-tag" data-cat="socialità" onclick="filterByCategory('socialità', this)">Socialità</span>
-                <span class="category-tag" data-cat="soddisfazione" onclick="filterByCategory('soddisfazione', this)">Soddisfazione 满足</span>
-                <span class="category-tag" data-cat="sognare" onclick="filterByCategory('sognare', this)">Sognare</span>
-                <span class="category-tag" data-cat="solitudine" onclick="filterByCategory('solitudine', this)">Solitudine</span>
-                <span class="category-tag" data-cat="sorveglianza" onclick="filterByCategory('sorveglianza', this)">Sorveglianza 监督</span>
-                <span class="category-tag" data-cat="sospetto" onclick="filterByCategory('sospetto', this)">Sospetto</span>
-                <span class="category-tag" data-cat="sostegno" onclick="filterByCategory('sostegno', this)">Sostegno</span>
-                <span class="category-tag" data-cat="sottomissione" onclick="filterByCategory('sottomissione', this)">Sottomissione 屈从</span>
-                <span class="category-tag" data-cat="stabilità" onclick="filterByCategory('stabilità', this)">Stabilità</span>
-                <span class="category-tag" data-cat="stanchezza" onclick="filterByCategory('stanchezza', this)">Stanchezza 疲惫</span>
-                <span class="category-tag" data-cat="strategia" onclick="filterByCategory('strategia', this)">Strategia 策略</span>
-                <span class="category-tag" data-cat="stupidità" onclick="filterByCategory('stupidità', this)">Stupidità 愚蠢</span>
-                <span class="category-tag" data-cat="successo" onclick="filterByCategory('successo', this)">Successo 成功</span>
-                <span class="category-tag" data-cat="talento" onclick="filterByCategory('talento', this)">Talento 天赋</span>
-                <span class="category-tag" data-cat="tempo" onclick="filterByCategory('tempo', this)">Tempo 时间</span>
-                <span class="category-tag" data-cat="tensione" onclick="filterByCategory('tensione', this)">Tensione</span>
-                <span class="category-tag" data-cat="termine" onclick="filterByCategory('termine', this)">Termine</span>
-                <span class="category-tag" data-cat="timore" onclick="filterByCategory('timore', this)">Timore</span>
-                <span class="category-tag" data-cat="tortura" onclick="filterByCategory('tortura', this)">Tortura</span>
-                <span class="category-tag" data-cat="trasparenza" onclick="filterByCategory('trasparenza', this)">Trasparenza 透明</span>
-                <span class="category-tag" data-cat="umore" onclick="filterByCategory('umore', this)">Umore</span>
-                <span class="category-tag" data-cat="umorismo" onclick="filterByCategory('umorismo', this)">Umorismo</span>
-                <span class="category-tag" data-cat="unicità" onclick="filterByCategory('unicità', this)">Unicità 独特</span>
-                <span class="category-tag" data-cat="valore" onclick="filterByCategory('valore', this)">Valore 价值</span>
-                <span class="category-tag" data-cat="vantaggio" onclick="filterByCategory('vantaggio', this)">Vantaggio 优势</span>
-                <span class="category-tag" data-cat="vendetta" onclick="filterByCategory('vendetta', this)">Vendetta 复仇</span>
-                <span class="category-tag" data-cat="vergogna" onclick="filterByCategory('vergogna', this)">Vergogna</span>
-                <span class="category-tag" data-cat="visione" onclick="filterByCategory('visione', this)">Visione</span>
-                <span class="category-tag" data-cat="vizio" onclick="filterByCategory('vizio', this)">Vizio 恶习</span>
-                
+        <select id="catSelect" class="cat-select" onchange="filterIdioms()">
+            <option value="all">全部分类</option>
+                        <option value="abbitudine">Abbitudine</option>
+            <option value="abbondanza">Abbondanza</option>
+            <option value="abilità">Abilità 手艺</option>
+            <option value="addio">Addio</option>
+            <option value="affari">Affari 事务</option>
+            <option value="affetto">Affetto</option>
+            <option value="affidabilità">Affidabilità</option>
+            <option value="affinità">Affinità 投缘</option>
+            <option value="agitazione">Agitazione</option>
+            <option value="allarme">Allarme</option>
+            <option value="allegria">Allegria</option>
+            <option value="ambiguità">Ambiguità 两面性</option>
+            <option value="amicizia">Amicizia 友谊</option>
+            <option value="amore">Amore</option>
+            <option value="annullamento">Annullamento</option>
+            <option value="apparenza">Apparenza 表象</option>
+            <option value="appetito">Appetito</option>
+            <option value="apprendimento">Apprendimento 学习</option>
+            <option value="arretratezza">Arretratezza</option>
+            <option value="aspettativa">Aspettativa 期待</option>
+            <option value="attenzione">Attenzione 注意力</option>
+            <option value="attesa">Attesa</option>
+            <option value="attività">Attività 活动</option>
+            <option value="attrazione">Attrazione</option>
+            <option value="audacia">Audacia</option>
+            <option value="auguri">Auguri 祝福</option>
+            <option value="autonomia">Autonomia 自主</option>
+            <option value="autorità">Autorità 权威</option>
+            <option value="azione">Azione 行动</option>
+            <option value="bellezza">Bellezza</option>
+            <option value="bontà">Bontà</option>
+            <option value="calma">Calma</option>
+            <option value="capacità">Capacità</option>
+            <option value="carattere">Carattere</option>
+            <option value="casa">Casa</option>
+            <option value="cattivo-umore">Cattivo umore</option>
+            <option value="cautela">Cautela 审慎</option>
+            <option value="chiacchiere">Chiacchiere 闲聊</option>
+            <option value="chiarezza">Chiarezza</option>
+            <option value="cibo">Cibo</option>
+            <option value="collaborazione">Collaborazione 协作</option>
+            <option value="colpa">Colpa</option>
+            <option value="commozione">Commozione</option>
+            <option value="comodità">Comodità</option>
+            <option value="competenza">Competenza</option>
+            <option value="compromesso">Compromesso</option>
+            <option value="comunicazione">Comunicazione 沟通</option>
+            <option value="comunità">Comunità 社区</option>
+            <option value="confusione">Confusione</option>
+            <option value="conoscenza">Conoscenza 认知</option>
+            <option value="conseguenze">Conseguenze</option>
+            <option value="consolazione">Consolazione 安慰</option>
+            <option value="contraddizione">Contraddizione 矛盾</option>
+            <option value="coraggio">Coraggio</option>
+            <option value="corteggiamento">Corteggiamento</option>
+            <option value="crisi">Crisi</option>
+            <option value="critica">Critica 批评</option>
+            <option value="crudeltà">Crudeltà</option>
+            <option value="cura">Cura</option>
+            <option value="danno">Danno</option>
+            <option value="decisione">Decisione</option>
+            <option value="delusione">Delusione</option>
+            <option value="desiderio">Desiderio</option>
+            <option value="determinazione">Determinazione 决心</option>
+            <option value="difetto">Difetto 缺点</option>
+            <option value="difficoltà">Difficoltà 困难</option>
+            <option value="dimenticanza">Dimenticanza</option>
+            <option value="disonestà">Disonestà</option>
+            <option value="distacco">Distacco</option>
+            <option value="distrazione">Distrazione 分心</option>
+            <option value="dolore">Dolore 痛苦</option>
+            <option value="domanda">Domanda</option>
+            <option value="doppiezza">Doppiezza 两面派</option>
+            <option value="dubbio">Dubbio 怀疑</option>
+            <option value="eccitazione">Eccitazione</option>
+            <option value="economia">Economia 理财</option>
+            <option value="efficienza">Efficienza 效率</option>
+            <option value="emozione">Emozione</option>
+            <option value="emozioni">Emozioni 情绪</option>
+            <option value="energia">Energia 精力</option>
+            <option value="entusiasmo">Entusiasmo</option>
+            <option value="errore">Errore 错误</option>
+            <option value="esclusione">Esclusione</option>
+            <option value="esperienza">Esperienza</option>
+            <option value="facilità">Facilità 轻松</option>
+            <option value="fallimento">Fallimento</option>
+            <option value="famiglia">Famiglia 家庭</option>
+            <option value="fastidio">Fastidio</option>
+            <option value="fatica">Fatica 辛苦</option>
+            <option value="felicità">Felicità 幸福</option>
+            <option value="fine">Fine</option>
+            <option value="finta">Finta</option>
+            <option value="fortuna">Fortuna</option>
+            <option value="fuga">Fuga</option>
+            <option value="furto">Furto</option>
+            <option value="futuro">Futuro</option>
+            <option value="gentilezza">Gentilezza</option>
+            <option value="gestione">Gestione 管理</option>
+            <option value="giardinaggio">Giardinaggio</option>
+            <option value="gioia">Gioia</option>
+            <option value="giudizio">Giudizio 判断</option>
+            <option value="gratitudine">Gratitudine 感恩</option>
+            <option value="gusto-personale">Gusto personale 个人品味</option>
+            <option value="ignoranza">Ignoranza</option>
+            <option value="ignorare">Ignorare</option>
+            <option value="illusione">Illusione 幻想</option>
+            <option value="imbarazzo">Imbarazzo 尴尬</option>
+            <option value="impedimento">Impedimento 阻碍</option>
+            <option value="impegno">Impegno</option>
+            <option value="impossibilità">Impossibilità</option>
+            <option value="impressione">Impressione</option>
+            <option value="inadeguatezza">Inadeguatezza</option>
+            <option value="inazione">Inazione</option>
+            <option value="incertezza">Incertezza</option>
+            <option value="incoerenza">Incoerenza 不一贯</option>
+            <option value="incomprensione">Incomprensione</option>
+            <option value="incoraggiamento">Incoraggiamento 鼓励</option>
+            <option value="indifferenza">Indifferenza</option>
+            <option value="indipendenza">Indipendenza 独立</option>
+            <option value="influenza">Influenza 影响</option>
+            <option value="ingiustizia">Ingiustizia</option>
+            <option value="insuccesso">Insuccesso</option>
+            <option value="intelligenza">Intelligenza</option>
+            <option value="interesse">Interesse 利益</option>
+            <option value="intromissione">Intromissione</option>
+            <option value="intuizione">Intuizione 直觉</option>
+            <option value="inutilità">Inutilità</option>
+            <option value="ironia">Ironia 讽刺</option>
+            <option value="lavoro">Lavoro 工作</option>
+            <option value="lealtà">Lealtà 忠诚</option>
+            <option value="legge">Legge</option>
+            <option value="libertà">Libertà 自由</option>
+            <option value="limitazione">Limitazione</option>
+            <option value="limite">Limite 边界</option>
+            <option value="logica">Logica 逻辑</option>
+            <option value="maldicenza">Maldicenza 诽谤</option>
+            <option value="maturità">Maturità</option>
+            <option value="mediazione">Mediazione</option>
+            <option value="memoria">Memoria</option>
+            <option value="minaccia">Minaccia</option>
+            <option value="mistero">Mistero</option>
+            <option value="moderazione">Moderazione 适度</option>
+            <option value="necessità">Necessità</option>
+            <option value="noia">Noia</option>
+            <option value="normalità">Normalità</option>
+            <option value="onestà">Onestà</option>
+            <option value="opportunismo">Opportunismo 投机</option>
+            <option value="opportunità">Opportunità 机会</option>
+            <option value="ordine">Ordine 秩序</option>
+            <option value="organizzazione">Organizzazione 规划</option>
+            <option value="ossessione">Ossessione</option>
+            <option value="ostacolo">Ostacolo 障碍</option>
+            <option value="ostilità">Ostilità</option>
+            <option value="ottimismo">Ottimismo 乐观</option>
+            <option value="pace">Pace 和平</option>
+            <option value="parole">Parole</option>
+            <option value="partecipazione">Partecipazione 参与</option>
+            <option value="partenza">Partenza</option>
+            <option value="paura">Paura</option>
+            <option value="pazienza">Pazienza 耐心</option>
+            <option value="pensiero">Pensiero</option>
+            <option value="perfezionismo">Perfezionismo 完美主义</option>
+            <option value="perseveranza">Perseveranza 坚毅</option>
+            <option value="piacere">Piacere 享乐</option>
+            <option value="pigrizia">Pigrizia</option>
+            <option value="potere">Potere 权力</option>
+            <option value="pratica">Pratica</option>
+            <option value="praticità">Praticità 实用</option>
+            <option value="precauzione">Precauzione</option>
+            <option value="precisione">Precisione</option>
+            <option value="preferenza">Preferenza</option>
+            <option value="preparazione">Preparazione 准备</option>
+            <option value="presa-in-giro">Presa in giro</option>
+            <option value="pressione">Pressione</option>
+            <option value="previdenza">Previdenza</option>
+            <option value="prigione">Prigione</option>
+            <option value="progresso">Progresso 进步</option>
+            <option value="promesse">Promesse 承诺</option>
+            <option value="prudenza">Prudenza 谨慎</option>
+            <option value="rabbia">Rabbia 愤怒</option>
+            <option value="raffinamento">Raffinamento</option>
+            <option value="rancore">Rancore</option>
+            <option value="rarità">Rarità 稀有</option>
+            <option value="rassegnazione">Rassegnazione</option>
+            <option value="realismo">Realismo 现实</option>
+            <option value="relazioni">Relazioni 人际关系</option>
+            <option value="ricerca">Ricerca 寻找</option>
+            <option value="riconciliazione">Riconciliazione 和解</option>
+            <option value="rimprovero">Rimprovero 责备</option>
+            <option value="rischio">Rischio</option>
+            <option value="risentimento">Risentimento 隐忍</option>
+            <option value="riserva">Riserva 底牌</option>
+            <option value="riservatezza">Riservatezza 谨慎</option>
+            <option value="rovina">Rovina</option>
+            <option value="sa-zietà">Sa zietà</option>
+            <option value="sacrificio">Sacrificio</option>
+            <option value="saggezza">Saggezza 智慧</option>
+            <option value="santità">Santità</option>
+            <option value="sbaglio">Sbaglio</option>
+            <option value="scelta">Scelta</option>
+            <option value="scherzo">Scherzo</option>
+            <option value="sconfitta">Sconfitta</option>
+            <option value="sconforto">Sconforto</option>
+            <option value="scoperta">Scoperta</option>
+            <option value="segretezza">Segretezza 保密</option>
+            <option value="semplicità">Semplicità 简单</option>
+            <option value="sfacciataggine">Sfacciataggine</option>
+            <option value="sfortuna">Sfortuna</option>
+            <option value="sforzo">Sforzo</option>
+            <option value="sicurezza">Sicurezza 保障</option>
+            <option value="similarità">Similarità 相似</option>
+            <option value="simulazione">Simulazione 伪装</option>
+            <option value="sincerità">Sincerità 坦诚</option>
+            <option value="socialità">Socialità</option>
+            <option value="soddisfazione">Soddisfazione 满足</option>
+            <option value="sognare">Sognare</option>
+            <option value="solitudine">Solitudine</option>
+            <option value="sorveglianza">Sorveglianza 监督</option>
+            <option value="sospetto">Sospetto</option>
+            <option value="sostegno">Sostegno</option>
+            <option value="sottomissione">Sottomissione 屈从</option>
+            <option value="stabilità">Stabilità</option>
+            <option value="stanchezza">Stanchezza 疲惫</option>
+            <option value="strategia">Strategia 策略</option>
+            <option value="stupidità">Stupidità 愚蠢</option>
+            <option value="successo">Successo 成功</option>
+            <option value="talento">Talento 天赋</option>
+            <option value="tempo">Tempo 时间</option>
+            <option value="tensione">Tensione</option>
+            <option value="termine">Termine</option>
+            <option value="timore">Timore</option>
+            <option value="tortura">Tortura</option>
+            <option value="trasparenza">Trasparenza 透明</option>
+            <option value="umore">Umore</option>
+            <option value="umorismo">Umorismo</option>
+            <option value="unicità">Unicità 独特</option>
+            <option value="valore">Valore 价值</option>
+            <option value="vantaggio">Vantaggio 优势</option>
+            <option value="vendetta">Vendetta 复仇</option>
+            <option value="vergogna">Vergogna</option>
+            <option value="visione">Visione</option>
+            <option value="vizio">Vizio 恶习</option>
+        </select>
     </div>
 </div>
 
@@ -2282,14 +2300,15 @@ body {
 function filterIdioms() {
     const q = document.getElementById('searchInput').value.toLowerCase().trim();
     const cards = document.querySelectorAll('.idiom-card');
-    const activeCat = document.querySelector('.category-tag.active:not([data-cat="all"])');
+    const sel = document.getElementById('catSelect');
+    const activeCat = sel ? sel.value : 'all';
     let visible = false;
     
     cards.forEach(c => {
         const searchText = c.dataset.search;
         const cats = c.dataset.category.split(' ');
         const matchSearch = !q || searchText.includes(q);
-        const matchCat = !activeCat || cats.includes(activeCat.dataset.cat);
+        const matchCat = activeCat === 'all' || cats.includes(activeCat);
         
         if (matchSearch && matchCat) {
             c.style.display = 'block';
@@ -2302,12 +2321,6 @@ function filterIdioms() {
     document.getElementById('noResults').style.display = visible ? 'none' : 'block';
 }
 
-function filterByCategory(cat, el) {
-    document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
-    el.classList.add('active');
-    filterIdioms();
-}
-
 // Back to top
 window.addEventListener('scroll', function() {
     document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 300);
@@ -2316,4 +2329,3 @@ window.addEventListener('scroll', function() {
 
 </body>
 </html>
-<!-- deployed batch #140-#189 @ 2026-08-22T06:09:51.480689Z -->
